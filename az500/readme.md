@@ -7,8 +7,8 @@
 
 - [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/neqjf5m83e37x4?wt.mc_id=esi_m2l_content_wwl)
 
-**[ラボ環境準備]**(/PDF/01-01-ラボ環境準備.pdf)
-
+- [ラボ環境準備](/PDF/01-01-ラボ環境準備.pdf)
+ 
   LODS
   AzurePass
 
