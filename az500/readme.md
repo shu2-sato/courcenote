@@ -11,7 +11,7 @@
  
   LODS
   AzurePass
-
+- [support使用法](pdf/support.pdf)
 
 ## 1.1. モジュール01
 - [Azure Active Directory の価格](https://www.microsoft.com/ja-jp/security/business/identity-access-management/azure-ad-pricing?rtc=1)
@@ -33,6 +33,9 @@
 - [Azure Policy とは](https://docs.microsoft.com/ja-jp/azure/governance/policy/overview)
 - [Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
 
+**memo**
+- [AZ-500 Azure ADまとめ](pdf/AZ-500%20Azure%20ADまとめ.pdf)
+- [Azure AD Connect](pdf/Azure%20AD%20Connect.pdf)
 
 ## 1.2. モジュール02
 
@@ -41,4 +44,15 @@
 ## 1.3. モジュール03
 
 ## 1.4. モジュール04
+**Monitor**
+- [Azure Monitor メトリックの概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/essentials/data-platform-metrics)
+- [Azure Monitor ログの概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs)
+- [アラート概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/alerts/alerts-overview)
+- [Azure Monitor の Log Analytics の概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/logs/log-analytics-overview)
+- [Kusto クエリ言語 (KQL) の概要](https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/query/)
+- [Azure プラットフォーム ログの概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/essentials/platform-logs-overview)
+- [Azure Monitor の Log Analytics エージェントのデータ ソース](https://docs.microsoft.com/ja-jp/azure/azure-monitor/agents/agent-data-sources)
+- [azure monitoring log demo](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade)
+
+**Defender**
 
