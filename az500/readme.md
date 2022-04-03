@@ -141,5 +141,7 @@
 - [Microsoft セキュリティ アラートからインシデントを自動的に作成する](https://docs.microsoft.com/ja-jp/azure/sentinel/create-incidents-from-alerts)
 - [チュートリアル: Microsoft Sentinel でオートメーション ルールとプレイブックを使用する](https://docs.microsoft.com/ja-jp/azure/sentinel/tutorial-respond-threats-playbook)
 - [Microsoft Sentinel を使用して脅威を追求する](https://docs.microsoft.com/ja-jp/azure/sentinel/hunting)
+
+**Memo**
 - [Microsoft Defender for Cloud まとめ](pdf/Microsoft%20Defender%20for%20Cloud%20まとめ.pdf)
 - [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
