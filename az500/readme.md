@@ -160,12 +160,12 @@ VMを作るときにAZ CLIのバグで以下のエラーが場合があります
 **対応**
 CLiのAz.Computeのバージョンを4.23.0に戻します。
 
->- 1 Check your current Az.Compute version number using either Get-Module Az.Compute (this will return nothing if the module hasn't been loaded) or Get-Module -ListAvailable -Name Az.Compute -Refresh
-
->- 2 Install Az.Compute version 4.23: Install-Module Az.Compute -RequiredVersion 4.23.0 -Force
-
->- 3 Switch to Az.Compute version 4.23: Import-Module Az.Compute -RequiredVersion 4.23.0
-
->- 4 Import-Module: Assembly with same name is already loaded エラーが出ますが
-
->- 5 Cloudshellを再起動します
+> 1 Check your current Az.Compute version number using either Get-Module Az.Compute (this will return nothing if the module hasn't been loaded) or Get-Module -ListAvailable -Name Az.Compute -Refresh
+>
+> 2 Install Az.Compute version 4.23: Install-Module Az.Compute -RequiredVersion 4.23.0 -Force
+>
+> 3 Switch to Az.Compute version 4.23: Import-Module Az.Compute -RequiredVersion 4.23.0
+>
+> 4 Import-Module: Assembly with same name is already loaded エラーが出ますが
+>
+> 5 Cloudshellを再起動します
