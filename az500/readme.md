@@ -7,10 +7,13 @@
 
 - [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/neqjf5m83e37x4?wt.mc_id=esi_m2l_content_wwl)
 
-- [ラボ環境準備](pdf/ラボ環境準備.pdf)
- 
-  LODS
-  AzurePass
+- [ラボ環境準備　PDF](pdf/ラボ環境準備.pdf)
+    - InPrivte モードでブラウザを起動
+    - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
+    - [LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
+    - トレーニングコードは、講師から案内があります。
+    - AzurePass サブスクリプションはラボ環境からアクティベートします。
+
 - [support使用法](pdf/support.pdf)
 
 ## 1.1. モジュール01
