@@ -2,8 +2,8 @@
 
 **リンク一覧およびメモ**
 
-[AZ-500 ラボコンテンツ](https://microsoftlearning.github.io/AZ-500JA-AzureSecurityTechnologies/)
-- ラボファイルをローカルにダウンロードする
+- [AZ-500 ラボコンテンツ](https://microsoftlearning.github.io/AZ-500JA-AzureSecurityTechnologies/)
+    - [ラボファイルをローカルにダウンロードする](https://github.com/MicrosoftLearning/AZ-500JA-AzureSecurityTechnologies/archive/master.zip)
 
 - [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/neqjf5m83e37x4?wt.mc_id=esi_m2l_content_wwl)
 
