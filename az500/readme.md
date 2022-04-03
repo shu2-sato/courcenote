@@ -128,6 +128,8 @@
 - [azure monitoring log demo](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade)
 
 **Defender**
+- [意図](https://docs.microsoft.com/ja-jp/azure/security-center/alerts-reference#intentions
+)
 - [Microsoft Defender for Cloud とは](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Defender for Cloud の強化されたセキュリティ機能](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/enhanced-security-features-overview)
 - [Azure セキュリティ ベンチマークの概要](https://docs.microsoft.com/ja-jp/security/benchmark/azure/introduction)
