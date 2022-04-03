@@ -150,19 +150,18 @@
 - [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
 
 **LAB13でエラーが出る時の対応**
-'''
-New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
-'''
-VMを作るときにAZ CLIのバグで以下のエラーが場合があります（ 3月時点で発生
-'''
-New-AzVM: 'VMCustomization' is not enabled for the Subscription. Please register the Subscription for 'Microsoft.Compute/VMCustomizationPreview' to use the feature.
 
-'''
-***対応**
+> New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
+
+VMを作るときにAZ CLIのバグで以下のエラーが場合があります（ 3月時点で発生)
+
+> New-AzVM: 'VMCustomization' is not enabled for the Subscription. Please register the Subscription for 'Microsoft.Compute/VMCustomizationPreview' to use the feature.
+
+**対応**
 CLiのAz.Computeのバージョンを4.23.0に戻します。
 
-1) Check your current Az.Compute version number using either Get-Module Az.Compute (this will return nothing if the module hasn't been loaded) or Get-Module -ListAvailable -Name Az.Compute -Refresh
-2) Install Az.Compute version 4.23: Install-Module Az.Compute -RequiredVersion 4.23.0 -Force
-3) Switch to Az.Compute version 4.23: Import-Module Az.Compute -RequiredVersion 4.23.0
-4) Import-Module: Assembly with same name is already loaded エラーが出ますが
-5) Cloudshellを再起動します
+>1 Check your current Az.Compute version number using either Get-Module Az.Compute (this will return nothing if the module hasn't been loaded) or Get-Module -ListAvailable -Name Az.Compute -Refresh
+>2 Install Az.Compute version 4.23: Install-Module Az.Compute -RequiredVersion 4.23.0 -Force
+>3 Switch to Az.Compute version 4.23: Import-Module Az.Compute -RequiredVersion 4.23.0
+>4 Import-Module: Assembly with same name is already loaded エラーが出ますが
+>5 Cloudshellを再起動します
