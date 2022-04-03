@@ -17,12 +17,13 @@
 - [Azure Active Directory の価格](https://www.microsoft.com/ja-jp/security/business/identity-access-management/azure-ad-pricing?rtc=1)
 - [自己管理型の Active Directory Domain Services、Azure Active Directory、およびマネージド Azure Active Directory Domain Services の比較](https://docs.microsoft.com/ja-jp/azure/active-directory-domain-services/compare-identity-solutions)
 - [Azure AD の組み込みロール](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/permissions-reference)
+  
 **HybridID**
 - [Azure AD Connect とは](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/whatis-azure-ad-connect)
 - [Azure AD Connect クラウド同期とは](https://docs.microsoft.com/ja-jp/azure/active-directory/cloud-sync/what-is-cloud-sync)
 - [Azure Active Directory ハイブリッド ID ソリューションの適切な認証方法を選択する](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/choose-ad-authn)
 - [チュートリアル:オンプレミス環境への Azure Active Directory のセルフサービス パスワード リセットのライトバックを有効にする](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/tutorial-enable-sspr-writeback)
-- 
+  
 **Identity** **Protection**
 - [Identity Protection とは](https://docs.microsoft.com/ja-jp/azure/active-directory/identity-protection/overview-identity-protection)
 - [動作のしくみ: Azure AD Multi-Factor Authentication](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/concept-mfa-howitworks)
@@ -41,6 +42,44 @@
 
 ## 1.2. モジュール02
 
+**境界セキュリティ**
+- [Azure DDoS Protection Standard の概要](https://docs.microsoft.com/ja-jp/azure/ddos-protection/ddos-protection-overview)
+- [Azure Firewall に関する FAQ](https://docs.microsoft.com/ja-jp/azure/firewall/firewall-faq)
+- [強制トンネリングについて](https://docs.microsoft.com/ja-jp/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm)
+- [チュートリアル: Azure portal を使用して Azure Firewall とポリシーをデプロイして構成する](https://docs.microsoft.com/ja-jp/azure/firewall/tutorial-firewall-deploy-portal-policy)
+- [Azure Firewall Manager とは](https://docs.microsoft.com/ja-jp/azure/firewall-manager/overview)
+
+**NetworkSecurity**
+
+- [ネットワーク セキュリティ グループ](https://docs.microsoft.com/ja-jp/azure/virtual-network/network-security-groups-overview)
+- [アプリケーション セキュリティ グループ](https://docs.microsoft.com/ja-jp/azure/virtual-network/application-security-groups)
+- [仮想ネットワーク サービス エンドポイント](https://docs.microsoft.com/ja-jp/azure/virtual-network/virtual-network-service-endpoints-overview)
+- [Azure Private Link とは](https://docs.microsoft.com/ja-jp/azure/private-link/private-link-overview?toc=/azure/virtual-network/toc.json)
+- [サービス エンドポイント](https://docs.microsoft.com/ja-jp/azure/virtual-network/vnet-integration-for-azure-services#compare-private-endpoints-and-service-endpoints)
+- [Azure Application Gateway とは](https://docs.microsoft.com/ja-jp/azure/application-gateway/overview)
+- [Azure Web アプリケーション ファイアウォールとは](https://docs.microsoft.com/ja-jp/azure/web-application-firewall/overview)
+- [Azure Front Door とは](https://docs.microsoft.com/ja-jp/azure/frontdoor/front-door-overview)
+- [Azure ExpressRoute とは](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-introduction)
+- [ExpressRoute 接続モデル](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-connectivity-models)
+- [ExpressRoute Direct について](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about)
+- [ExpressRoute の暗号化](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-about-encryption)
+  
+**HOSTSecurity**
+- [特権アクセス ストーリーの一部としてのデバイスのセキュリティ保護](https://docs.microsoft.com/ja-jp/security/compass/privileged-access-devices)
+- [Azure Bastion とは](https://docs.microsoft.com/ja-jp/azure/bastion/bastion-overview)
+- [Update Management の概要](https://docs.microsoft.com/ja-jp/azure/automation/update-management/overview)
+- [Windows VM 用の Azure Disk Encryption](https://docs.microsoft.com/ja-jp/azure/virtual-machines/windows/disk-encryption-overview)
+- [Linux VM に対する Azure Disk Encryption](https://docs.microsoft.com/ja-jp/azure/virtual-machines/linux/disk-encryption-overview)
+- [Azure セキュリティ ベンチマークの概要](https://docs.microsoft.com/ja-jp/security/benchmark/azure/introduction)
+- [資産インベントリを使用してリソースのセキュリティ態勢を管理する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/asset-inventory)
+  
+**コンテナセキュリティ**
+- [コンテナーと仮想マシン](https://docs.microsoft.com/ja-jp/virtualization/windowscontainers/about/containers-vs-vm)
+- [Azure Container Instances のセキュリティに関する考慮事項](https://docs.microsoft.com/ja-jp/azure/container-instances/container-instances-image-security)
+- [チュートリアル: Azure Kubernetes Service (AKS) でのアプリケーションに対するネットワークの概念](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network)
+- [Azure Kubernetes Service (AKS) でのアプリケーションのストレージ オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-storage)
+- [Azure Kubernetes Service (AKS) でのアクセスと ID オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-identity)
+
 
 
 ## 1.3. モジュール03
@@ -51,7 +90,7 @@
 - [HSM で保護されたキーを Key Vault にインポートする](https://docs.microsoft.com/ja-jp/azure/key-vault/keys/hsm-protected-keys)
   
 **APP**
-- [Microsoft ID プラットフォームとは] (https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-overview)
+- [Microsoft ID プラットフォームとは](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-overview)
 - [Microsoft Graph セキュリティ API の概要](https://docs.microsoft.com/ja-jp/graph/security-concept-overview)
 - [Azure リソースのマネージド ID とは](https://docs.microsoft.com/ja-jp/azure/active-directory/managed-identities-azure-resources/overview)
 - [Graph Exploer](https://developer.microsoft.com/en-us/graph/graph-explorer)
@@ -72,7 +111,7 @@
 - [動的データ マスク](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview)
 - [Always Encrypted](https://docs.microsoft.com/ja-jp/sql/relational-databases/security/encryption/always-encrypted-database-engine?view=sql-server-ver15)
 - [Azure SQL Analytics (プレビュー) を使用した Azure SQL Database の監視](https://docs.microsoft.com/ja-jp/azure/azure-monitor/insights/azure-sql)
-- 
+  
 
 ## 1.4. モジュール04
 **Monitor**
