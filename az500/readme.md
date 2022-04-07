@@ -156,7 +156,18 @@
 - [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
 
 **LAB13でエラーが出る時の対応**
+ 2.7.5                 Az.Accounts 
+4.25.0                Az.Compute       
+のバージョンで復旧しています。
+以前古いモジュールをIinstallしていた場合は、
+get-moduleで確認して古いバージョンであれば、
+>.local/share/powershell/Modules/Az.Accounts/
+.local/share/powershell/Modules/Az.Compute/
+のから古いバージョンのディレクトリを削除しPowershellを再起動してください。
 
+[Azure PowerShell でのモジュールの読み込みのトラブルシューティング](https://github.com/Azure/azure-powershell/blob/main/documentation/troubleshoot-module-load.md#potential-reason-1-older-version-stored-in-user-or-global-scope)
+
+**以下は、2022/4/7現在復旧しています**
 > New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
 
 VMを作るときにAZ CLIのバグで以下のエラーが場合があります
