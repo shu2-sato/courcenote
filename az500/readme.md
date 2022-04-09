@@ -161,7 +161,7 @@
 - 4.25.0                Az.Compute       
 
 のバージョンで復旧しています。
-以前古いモジュールをIinstallしていた場合は、
+以前古いモジュールをInstallしていた場合は、
 get-moduleで確認して古いバージョンであれば、
 >.local/share/powershell/Modules/Az.Accounts/
 .local/share/powershell/Modules/Az.Compute/
