@@ -143,6 +143,7 @@
 - [Just-In-Time アクセスを使用して管理ポートをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc)
 - [セキュリティ アラート - リファレンス ガイド](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/alerts-reference)
 - [クラウドトリガーに対する Microsoft Defender への応答を自動化する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/workflow-automation)
+- [Microsoft Power Automate と Azure Logic Apps の比較](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs?msclkid=edcdfb9fb7d211ecaa09f53cbbd86280#compare-microsoft-power-automate-and-azure-logic-apps)
 
 **Sentinel**
 - [Microsoft Sentinel とは](https://docs.microsoft.com/ja-jp/azure/sentinel/overview)
