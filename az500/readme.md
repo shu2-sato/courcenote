@@ -10,10 +10,11 @@
 - [ラボ環境準備　PDF](pdf/ラボ環境準備.pdf)
     - InPrivte モードでブラウザを起動
     - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
-    - [LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
+    - ラボ環境[LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)**今回新しく作ったMSアカウントでログインしてください。**
     - トレーニングコードは、講師から案内があります。
     - AzurePass サブスクリプションはラボ環境からアクティベートします。
-
+    - ラボ環境が英語の場合[ラボ環境キーボード変更](pdf/ラボ環境キーボード変更.pdf)
+    
 - [support使用法](pdf/support.pdf)
 
 ## 1.1. モジュール01
@@ -156,8 +157,9 @@
 - [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
 
 **LAB13でエラーが出る時の対応**
- 2.7.5                 Az.Accounts 
-4.25.0                Az.Compute       
+- 2.7.5                 Az.Accounts 
+- 4.25.0                Az.Compute       
+
 のバージョンで復旧しています。
 以前古いモジュールをIinstallしていた場合は、
 get-moduleで確認して古いバージョンであれば、
