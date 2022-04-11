@@ -40,6 +40,8 @@
 - [Azure AD のセキュリティの既定値群](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
 
 **PIM**
+- [ゼロトラストという戦術の使い方(IPA)](https://www.ipa.go.jp/icscoe/program/core_human_resource/final_project/zero-trust.html?msclkid=ca679eb7b9de11ec95013ea55f031876)
+- [ゼロトラスト導入指南書(IPA) 上記リンクのPDF](https://www.ipa.go.jp/files/000092243.pdf)
 - [先回り型のセキュリティをゼロ トラストで取り入れる](https://www.microsoft.com/ja-jp/security/business/zero-trust)
 - [Azure AD Privileged Identity Management とは](https://docs.microsoft.com/ja-jp/azure/active-directory/privileged-identity-management/pim-configure)
 - [Security best practices for Azure solution](https://azure.microsoft.com/mediahandler/files/resourcefiles/security-best-practices-for-azure-solutions/Azure%20Security%20Best%20Practices.pdf)
