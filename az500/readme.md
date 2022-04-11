@@ -21,6 +21,10 @@
 - [Azure Active Directory の価格](https://www.microsoft.com/ja-jp/security/business/identity-access-management/azure-ad-pricing?rtc=1)
 - [自己管理型の Active Directory Domain Services、Azure Active Directory、およびマネージド Azure Active Directory Domain Services の比較](https://docs.microsoft.com/ja-jp/azure/active-directory-domain-services/compare-identity-solutions)
 - [Azure AD の組み込みロール](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/permissions-reference)
+- [Azure Active Directory の管理単位](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/administrative-units?msclkid=96ef8dc1b80111ecb3108ac36c0152b9)
+- [チュートリアル:グループ メンバーを自動的に追加/削除する](https://docs.microsoft.com/ja-jp/azure/active-directory/enterprise-users/groups-dynamic-tutorial)
+- [Passwordless authentication is now generally available!](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/passwordless-authentication-is-now-generally-available/ba-p/1994700?msclkid=cb0f57efb80211ecb781b280a97fba33)
+- 
   
 **HybridID**
 - [Azure AD Connect とは](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/whatis-azure-ad-connect)
@@ -36,6 +40,8 @@
 - [Azure AD のセキュリティの既定値群](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
 
 **PIM**
+- [先回り型のセキュリティをゼロ トラストで取り入れる](https://www.microsoft.com/ja-jp/security/business/zero-trust)
+- [Azure AD Privileged Identity Management とは](https://docs.microsoft.com/ja-jp/azure/active-directory/privileged-identity-management/pim-configure)
 - [Security best practices for Azure solution](https://azure.microsoft.com/mediahandler/files/resourcefiles/security-best-practices-for-azure-solutions/Azure%20Security%20Best%20Practices.pdf)
 - [Azure Policy とは](https://docs.microsoft.com/ja-jp/azure/governance/policy/overview)
 - [Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
