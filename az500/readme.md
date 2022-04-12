@@ -97,7 +97,6 @@
 - [イングレス コントローラー](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network#ingress-controllers)
 - [Azure Kubernetes Service (AKS) でのアプリケーションのストレージ オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-storage)
 - [Azure Kubernetes Service (AKS) でのアクセスと ID オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-identity)
-
 - [Japan Azure IaaS Core Support Blog](https://jpaztech.github.io/blog/tags/Containers/)
 
 ## 1.3. モジュール03
