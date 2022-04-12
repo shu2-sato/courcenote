@@ -93,6 +93,8 @@
 - [Azure Container Instances とは](https://docs.microsoft.com/ja-jp/azure/container-instances/container-instances-overview)
 - [Azure Kubernetes Serviceについて](https://docs.microsoft.com/ja-jp/azure/aks/intro-kubernetes)
 - [チュートリアル: Azure Kubernetes Service (AKS) でのアプリケーションに対するネットワークの概念](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network)
+- [サービス](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network#services)
+- [イングレス コントローラー](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network#ingress-controllers)
 - [Azure Kubernetes Service (AKS) でのアプリケーションのストレージ オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-storage)
 - [Azure Kubernetes Service (AKS) でのアクセスと ID オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-identity)
 
