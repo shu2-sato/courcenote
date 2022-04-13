@@ -120,6 +120,7 @@
 - [Azure Storage に対する要求を承認する](https://docs.microsoft.com/ja-jp/rest/api/storageservices/authorize-requests-to-azure-storage)
 - [Shared Access Signatures (SAS) を使用して Azure Storage リソースへの制限付きアクセスを許可する](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)
 - [保存データに対する Azure Storage 暗号化](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-service-encryption)
+- [クイック スタート:Azure Storage Explorer を使用して BLOB を作成する](https://docs.microsoft.com/ja-jp/azure/storage/blobs/quickstart-storage-explorer)
 
 **SQLServer**
 - [SQLServerでAzure Active Directory 認証を使用する](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/authentication-aad-overview)
