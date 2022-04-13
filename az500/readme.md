@@ -18,13 +18,15 @@
 - [support使用法](pdf/support.pdf)
 
 ## 1.1. モジュール01
+- [Azure Active Directory とは](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/active-directory-whatis)
 - [Azure Active Directory の価格](https://www.microsoft.com/ja-jp/security/business/identity-access-management/azure-ad-pricing?rtc=1)
+- [Azure Active Directory の基礎のドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/)
+- [Azure Active Directory を使用して基本グループを作成してメンバーを追加する](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal?context=azure/active-directory/users-groups-roles/context/ugr-context)
 - [自己管理型の Active Directory Domain Services、Azure Active Directory、およびマネージド Azure Active Directory Domain Services の比較](https://docs.microsoft.com/ja-jp/azure/active-directory-domain-services/compare-identity-solutions)
 - [Azure AD の組み込みロール](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/permissions-reference)
 - [Azure Active Directory の管理単位](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/administrative-units?msclkid=96ef8dc1b80111ecb3108ac36c0152b9)
 - [チュートリアル:グループ メンバーを自動的に追加/削除する](https://docs.microsoft.com/ja-jp/azure/active-directory/enterprise-users/groups-dynamic-tutorial)
 - [Passwordless authentication is now generally available!](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/passwordless-authentication-is-now-generally-available/ba-p/1994700?msclkid=cb0f57efb80211ecb781b280a97fba33)
-- 
   
 **HybridID**
 - [Azure AD Connect とは](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/whatis-azure-ad-connect)
@@ -34,6 +36,7 @@
   
 **Identity** **Protection**
 - [Identity Protection とは](https://docs.microsoft.com/ja-jp/azure/active-directory/identity-protection/overview-identity-protection)
+- [リスクの種類と検出](https://docs.microsoft.com/ja-jp/azure/active-directory/identity-protection/concept-identity-protection-risks#risk-types-and-detection)
 - [動作のしくみ: Azure AD Multi-Factor Authentication](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/concept-mfa-howitworks)
 - [条件付きアクセスとは](https://docs.microsoft.com/ja-jp/azure/active-directory/conditional-access/overview)
 - [Azure AD アクセス レビューとは](https://docs.microsoft.com/ja-jp/azure/active-directory/governance/access-reviews-overview)
@@ -44,9 +47,16 @@
 - [ゼロトラスト導入指南書(IPA) 上記リンクのPDF](https://www.ipa.go.jp/files/000092243.pdf)
 - [先回り型のセキュリティをゼロ トラストで取り入れる](https://www.microsoft.com/ja-jp/security/business/zero-trust)
 - [Azure AD Privileged Identity Management とは](https://docs.microsoft.com/ja-jp/azure/active-directory/privileged-identity-management/pim-configure)
+- [PIM ダッシュボード](https://portal.azure.com/#blade/Microsoft_Azure_PIMCommon/ResourceMenuBlade/aadoverview/resourceId//resourceType/tenant/provider/aadroles/defaultId/roles)
 - [Security best practices for Azure solution](https://azure.microsoft.com/mediahandler/files/resourcefiles/security-best-practices-for-azure-solutions/Azure%20Security%20Best%20Practices.pdf)
 - [Azure Policy とは](https://docs.microsoft.com/ja-jp/azure/governance/policy/overview)
 - [Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
+
+**エンターブライズ**  **ガバナンス**
+- [サブスクリプション決定ガイド](https://docs.microsoft.com/ja-jp/azure/cloud-adoption-framework/decision-guides/subscriptions/#modeling-your-organization)
+- [Azure 管理グループのドキュメント](https://docs.microsoft.com/ja-jp/azure/governance/management-groups/)
+- [Azure Policy のドキュメント](https://docs.microsoft.com/ja-jp/azure/governance/policy/)
+- [従来のサブスクリプション管理者ロール、Azure ロール、および Azure AD ロール](https://docs.microsoft.com/ja-jp/azure/role-based-access-control/rbac-and-directory-admin-roles)
 
 **memo**
 - [AZ-500 Azure ADまとめ](pdf/AZ-500%20Azure%20ADまとめ.pdf)
