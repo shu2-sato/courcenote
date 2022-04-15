@@ -110,7 +110,7 @@
 - [Japan Azure IaaS Core Support Blog](https://jpaztech.github.io/blog/tags/Containers/)
 - [https://azure.github.io/application-gateway-kubernetes-ingress/ 詳しい資料](https://azure.github.io/application-gateway-kubernetes-ingress/)
 
-**K8S参考資料*
+**K8S参考資料**
 - [Serviceを使ったアプリケーションの公開](https://kubernetes.io/ja/docs/tutorials/kubernetes-basics/expose/expose-intro/)
 - [Service(上の資料より詳しい説明資料)](https://kubernetes.io/ja/docs/concepts/services-networking/service/)
 - 
