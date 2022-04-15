@@ -108,6 +108,12 @@
 - [Azure Kubernetes Service (AKS) でのアプリケーションのストレージ オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-storage)
 - [Azure Kubernetes Service (AKS) でのアクセスと ID オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-identity)
 - [Japan Azure IaaS Core Support Blog](https://jpaztech.github.io/blog/tags/Containers/)
+- [https://azure.github.io/application-gateway-kubernetes-ingress/ 詳しい資料](https://azure.github.io/application-gateway-kubernetes-ingress/)
+
+**K8S参考資料*
+- [Serviceを使ったアプリケーションの公開](https://kubernetes.io/ja/docs/tutorials/kubernetes-basics/expose/expose-intro/)
+- [Service(上の資料より詳しい説明資料)](https://kubernetes.io/ja/docs/concepts/services-networking/service/)
+- 
 
 ## 1.3. モジュール03
 **KeyVault**
@@ -176,6 +182,9 @@
 **Memo**
 - [Microsoft Defender for Cloud まとめ](pdf/Microsoft%20Defender%20for%20Cloud%20まとめ.pdf)
 - [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
+
+
+## ラボ　補足
 
 **ラボ環境IME不整合**
 - [WindowsPCの場合、キー入力で不整合がある場合の対応](pdf/ラボ環境IME不整合.pdf)
