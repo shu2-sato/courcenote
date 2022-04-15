@@ -177,6 +177,17 @@
 - [Microsoft Defender for Cloud まとめ](pdf/Microsoft%20Defender%20for%20Cloud%20まとめ.pdf)
 - [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
 
+**ラボ環境IME不整合**
+- [WindowsPCの場合、キー入力で不整合がある場合の対応](pdf/ラボ環境IME不整合.pdf)
+
+**LAB4テナント削除**
+- [テナント削除の注意](pdf/テナント削除.pdf)
+ 無効化できないので、期限切れまで削除できません。
+
+**LAB13のVMメモリー使用状況**
+- [VM拡張診断の診断設定が必要](pdf/LAB13VM診断設定が必要.pdf)
+
+
 **LAB13でエラーが出る時の対応**
 - 2.7.5                 Az.Accounts 
 - 4.25.0                Az.Compute       
