@@ -11,9 +11,11 @@
 - [M365 インシデントを調査する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/4-investigate-incidents)
 - [M365 アクション センターを使用する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/5-use-action-center)
 - [M365 高度な捜索を実行する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/6-conduct-advanced-hunting)
+  **O365**
 - [O365 自動化、調査、修復](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/automate-investigate-remediate)
 - [O365 構成、保護、検出](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/configure-protect-detect)
 - [O365 攻撃のシミュレーション](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/simulate-attacks)
+  **Identity**
 - [Microsoft Defender for Identity の概要](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/introduction)
 - [Microsoft Defender for Identity センサーを構成する](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/configure-sensors)
 - [不正アクセスされたアカウントまたはデータを確認](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/review-compromised-accounts)
