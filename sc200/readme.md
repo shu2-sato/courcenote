@@ -27,12 +27,12 @@
   - [ms-learn::不正アクセスされたアカウントまたはデータを確認](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/review-compromised-accounts)
   - [ms-learn::他の Microsoft ツールとの統合](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/integrate-microsoft-tools)
   **Defender_for_Cloud_Apps(CASB)**
-  - [Microsoft Defender for Cloud Apps の概要](https://docs.microsoft.com/ja-jp/defender-cloud-apps/what-is-defender-for-cloud-apps)
-  - [クイックスタート: Microsoft Defender for Cloud Apps の使用を開始する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/get-started)
-    - [チュートリアル:ネットワーク内のシャドウ IT の検出と管理](https://docs.microsoft.com/ja-jp/defender-cloud-apps/tutorial-shadow-it)
-    - [チュートリアル:UEBA を使用して疑わしいユーザー アクティビティを検出する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/tutorial-suspicious-activity)
-    - [チュートリアル: 危険な OAuth アプリを調査して修復する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/investigate-risky-oauth)
-    - [チュートリアル:機密情報のダウンロードをブロックする](https://docs.microsoft.com/ja-jp/defender-cloud-apps/use-case-proxy-block-session-aad)
+- [Microsoft Defender for Cloud Apps の概要](https://docs.microsoft.com/ja-jp/defender-cloud-apps/what-is-defender-for-cloud-apps)
+- [クイックスタート: Microsoft Defender for Cloud Apps の使用を開始する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/get-started)
+  - [チュートリアル:ネットワーク内のシャドウ IT の検出と管理](https://docs.microsoft.com/ja-jp/defender-cloud-apps/tutorial-shadow-it)
+  - [チュートリアル:UEBA を使用して疑わしいユーザー アクティビティを検出する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/tutorial-suspicious-activity)
+  - [チュートリアル: 危険な OAuth アプリを調査して修復する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/investigate-risky-oauth)
+  - [チュートリアル:機密情報のダウンロードをブロックする](https://docs.microsoft.com/ja-jp/defender-cloud-apps/use-case-proxy-block-session-aad)
   **Purview**
   Microsoft 365コンプライアンスが Microsoft Purview と呼ばれるようになり、コンプライアンス領域内のソリューションがブランド変更されました
 - [データ損失防止ポリシーのアラートを構成および表示する](https://docs.microsoft.com/ja-jp/microsoft-365/compliance/dlp-configure-view-alerts-policies?view=o365-worldwide)
