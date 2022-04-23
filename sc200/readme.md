@@ -7,19 +7,20 @@
 - [Microsoft 365 Defender](https://docs.microsoft.com/ja-jp/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide)
 - [Microsoft 365 Defenderアーキテクチャ](https://docs.microsoft.com/ja-jp/microsoft-365/security/defender/eval-overview?view=o365-worldwide#microsoft-365-defender-architecture)
 - [Microsoft 365 Defender ポータル (https://security.microsoft.com/) ](https://security.microsoft.com/)
-- [M365 インシデントの管理](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/3-manage-incidents)
-- [M365 インシデントを調査する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/4-investigate-incidents)
-- [M365 アクション センターを使用する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/5-use-action-center)
-- [M365 高度な捜索を実行する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/6-conduct-advanced-hunting)
+- [Microsoft 365 Defenderを使用したインシデント対応](https://docs.microsoft.com/ja-jp/microsoft-365/security/defender/incidents-overview?view=o365-worldwide)
+  - [MS-lern:M365 インシデントの管理](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/3-manage-incidents)
+  - [ms-learn:M365 インシデントを調査する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/4-investigate-incidents)
+  - [ms-learn:M365 アクション センターを使用する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/5-use-action-center)
+  - [ms-learn:M365 高度な捜索を実行する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/6-conduct-advanced-hunting)
   **O365**
-- [O365 自動化、調査、修復](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/automate-investigate-remediate)
-- [O365 構成、保護、検出](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/configure-protect-detect)
-- [O365 攻撃のシミュレーション](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/simulate-attacks)
+- [ms-learn:O365 自動化、調査、修復](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/automate-investigate-remediate)
+- [ms-learn:O365 構成、保護、検出](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/configure-protect-detect)
+- [ms-learn:O365 攻撃のシミュレーション](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/simulate-attacks)
   **Identity**
-- [Microsoft Defender for Identity の概要](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/introduction)
-- [Microsoft Defender for Identity センサーを構成する](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/configure-sensors)
-- [不正アクセスされたアカウントまたはデータを確認](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/review-compromised-accounts)
-- [他の Microsoft ツールとの統合](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/integrate-microsoft-tools)
+- [ms-learn:Microsoft Defender for Identity の概要](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/introduction)
+- [ms-learn:Microsoft Defender for Identity センサーを構成する](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/configure-sensors)
+- [ms-learn::不正アクセスされたアカウントまたはデータを確認](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/review-compromised-accounts)
+- [ms-learn::他の Microsoft ツールとの統合](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-safeguard/integrate-microsoft-tools)
 
 ## 2.2 モジュール 2 – Microsoft Defender for Endpoint を使用して脅威を軽減する
 - [対応措置を講じる](https://docs.microsoft.com/ja-jp/learn/modules/m365-detect-respond-security-issues-defender-endpoint/take-response-actions)
@@ -41,3 +42,8 @@
 ## 2.7 モジュール 7 – Microsoft Sentinel を使用して脅威を検出し、調査を実行する
 
 ## 2.8 モジュール 8 – Microsoft Sentinel で脅威ハンティングを実行する 
+
+## 参考
+- [JPCERT:インシデント調査のための攻撃ツール等の実行痕跡調査に関する報告書](https://www.jpcert.or.jp/research/ir_research.html)
+- [JPCERT:ツール分析結果シート](https://jpcertcc.github.io/ToolAnalysisResultSheet_jp/)
+- [mimikatz](https://github.com/gentilkiwi/mimikatz)
