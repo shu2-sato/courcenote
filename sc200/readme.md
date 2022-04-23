@@ -13,8 +13,7 @@
   - [ms-learn:M365 アクション センターを使用する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/5-use-action-center)
   - [ms-learn:M365 高度な捜索を実行する](https://docs.microsoft.com/ja-jp/learn/modules/mitigate-incidents-microsoft-365-defender/6-conduct-advanced-hunting)
 - [Microsoft 365 Defenderの脅威分析](https://docs.microsoft.com/ja-jp/microsoft-365/security/defender/threat-analytics?view=o365-worldwide)
-
-   **O365**
+### O365
 - [Microsoft Defender for Office 365 でのステップ バイ ステップの脅威に対する保護](https://docs.microsoft.com/ja-jp/microsoft-365/security/office-365-security/protection-stack-microsoft-defender-for-office365?view=o365-worldwide)
 - [Microsoft Defender for Office 365を試す](https://docs.microsoft.com/ja-jp/microsoft-365/security/office-365-security/try-microsoft-defender-for-office-365?view=o365-worldwide)
   - [ms-learn:O365 自動化、調査、修復](https://docs.microsoft.com/ja-jp/learn/modules/m365-threat-remediate/automate-investigate-remediate)
