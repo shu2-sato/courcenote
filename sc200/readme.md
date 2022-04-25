@@ -47,9 +47,25 @@
 
 
 ## 2.3 モジュール 3 – Microsoft Defender for Cloud を使用して脅威を軽減する
-
+- [クイックスタート: 強化されたセキュリティ機能を有効にする](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/enable-enhanced-security)
+- [Azure 以外のマシンを Microsoft Defender for Cloud に接続する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/quickstart-onboard-machines?pivots=azure-arc)
+- [AWS アカウントを Microsoft Defender for Cloud に接続する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings)
+- [GCP プロジェクトを Microsoft Defender for Cloud に接続する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings)
+- [Microsoft Defender for App Service の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-app-service-introduction#what-are-the-benefits-of-microsoft-defender-for-app-service)
+- [Microsoft Defender for Storage の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-storage-introduction#what-are-the-benefits-of-microsoft-defender-for-storage)
+- [Microsoft Defender for SQL の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-sql-introduction#what-are-the-benefits-of-microsoft-defender-for-sql)
+- [Microsoft Defender for open-source relational databases の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-databases-introduction#what-are-the-benefits-of-microsoft-defender-for-open-source-relational-databases)
+- [Microsoft Defender for Key Vault の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-key-vault-introduction#what-are-the-benefits-of-microsoft-defender-for-key-vault)
+- [Microsoft Defender for Resource Manager の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-resource-manager-introduction#what-are-the-benefits-of-microsoft-defender-for-resource-manager)
+- [Microsoft Defender for DNS の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-dns-introduction#what-are-the-benefits-of-microsoft-defender-for-dns)
+- [Microsoft Defender for Containers の利点](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks#what-are-the-benefits-of-microsoft-defender-for-containers)
 ## 2.4 モジュール 4 – Kusto クエリ を使用して Microsoft Sentinel のクエリを作成する
-
+- [log demo](https://aka.ms/lademo)
+- [チュートリアル: Kusto クエリを使用する](https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
+- [KQL クイック リファレンス](https://docs.microsoft.com/ja-jp/azure/data-explorer/kql-quick-reference)
+- [Security Community](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/join-our-security-community/ba-p/927888?azure-portal=true)
+- [parse 演算子](https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/query/parseoperator)
+  
 ## 2.5 モジュール 5 – Microsoft Sentinel 環境を構成する
 
 ## 2.6 モジュール 6 – ログを Microsoft Sentinel に接続する
