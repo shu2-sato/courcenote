@@ -1,6 +1,11 @@
 ## SC-200
 
 
+- [SC-200 ラボコンテンツ(日本語)](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst.ja-jp)
+    - [英語版](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst)
+
+- [SC-200 トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/zwm5c4dezn0k1n?wt.mc_id=esi_m2l_content_wwl)
+
 
 
 ## 2.1 モジュール 1 – Microsoft 365 Defender を使用して脅威を軽減する
@@ -71,6 +76,13 @@
 - [parse 演算子](https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/query/parseoperator)
   
 ## 2.5 モジュール 5 – Microsoft Sentinel 環境を構成する
+- [Microsoft Sentinel ワークスペース アーキテクチャを設計する](https://docs.microsoft.com/ja-jp/azure/sentinel/design-your-workspace-architecture)
+- [Microsoft Sentinel のサンプル ワークスペースの設計](https://docs.microsoft.com/ja-jp/azure/sentinel/quickstart-onboard)
+- [Microsoft Sentinel でウォッチリストを作成する](https://docs.microsoft.com/ja-jp/azure/sentinel/watchlists-create)
+- [https://docs.microsoft.com/ja-jp/azure/sentinel/watchlists-queries](https://docs.microsoft.com/ja-jp/azure/sentinel/watchlists-queries)
+- [脅威インテリジェンス プラットフォームを Microsoft Sentinel に接続する](https://docs.microsoft.com/ja-jp/azure/sentinel/connect-threat-intelligence-tip)
+- [Microsoft Azure Sentinel を STIX、TAXII 脅威インテリジェンス フィードに接続する](https://docs.microsoft.com/ja-jp/azure/sentinel/connect-threat-intelligence-taxii)
+- [Microsoft Sentinel で脅威インジケーターを操作する](https://docs.microsoft.com/ja-jp/azure/sentinel/work-with-threat-indicators)
 
 ## 2.6 モジュール 6 – ログを Microsoft Sentinel に接続する
 
