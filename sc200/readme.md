@@ -101,4 +101,5 @@
 - [JPCERT:Emotet感染の確認方法と対策(動画)](https://www.youtube.com/watch?v=nqxikr1x2ag)
 
 ## 参考
+- [ロシアのサイバー攻撃の政府に対するリスクが拡大: マイクロソフトの年次報告書から](https://news.microsoft.com/ja-jp/2021/10/18/211018-digital-defense-report-2021/)
 - [mimikatz](https://github.com/gentilkiwi/mimikatz)
