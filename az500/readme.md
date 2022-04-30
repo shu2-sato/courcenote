@@ -61,11 +61,12 @@
 **memo**
 - [AZ-500 Azure ADまとめ](pdf/AZ-500%20Azure%20ADまとめ.pdf)
 - [Azure AD Connect](pdf/Azure%20AD%20Connect.pdf)
-**参考**
+**参考AAD関連**
 - [Azure AD Webinar ](http://aka.ms/azureadwebinar)
 - [Japan Azure Identity Support Blog ](https://github.com/jpazureid/blog)
 - [EMS Blog ](http://aka.ms/emsblog/)
 - [Azure AD Tips 集](http://aka.ms/aadtips)
+- [Microsoft ID プラットフォームのドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/)
 
 ## 1.2. モジュール02
 
