@@ -65,6 +65,7 @@
 - [Azure AD Webinar ](http://aka.ms/azureadwebinar)
 - [Japan Azure Identity Support Blog ](https://github.com/jpazureid/blog)
 - [EMS Blog ](http://aka.ms/emsblog/)
+- [Azure AD Tips 集](http://aka.ms/aadtips)
 
 ## 1.2. モジュール02
 
