@@ -61,6 +61,10 @@
 **memo**
 - [AZ-500 Azure ADまとめ](pdf/AZ-500%20Azure%20ADまとめ.pdf)
 - [Azure AD Connect](pdf/Azure%20AD%20Connect.pdf)
+**参考**
+- [Azure AD Webinar ](http://aka.ms/azureadwebinar)
+- [Japan Azure Identity Support Blog ](https://github.com/jpazureid/blog)
+- [EMS Blog ](http://aka.ms/emsblog/)
 
 ## 1.2. モジュール02
 
