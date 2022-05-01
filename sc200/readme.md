@@ -84,11 +84,14 @@
 - [Microsoft Sentinel で脅威インジケーターを操作する](https://docs.microsoft.com/ja-jp/azure/sentinel/work-with-threat-indicators)
 
 ## 2.6 モジュール 6 – ログを Microsoft Sentinel に接続する
+- [Microsoft Azure Sentinel データ コネクタを見つける](https://docs.microsoft.com/ja-jp/azure/sentinel/data-connectors-reference)
 
 ## 2.7 モジュール 7 – Microsoft Sentinel を使用して脅威を検出し、調査を実行する
-
+- [https://github.com/Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel)
+  
 ## 2.8 モジュール 8 – Microsoft Sentinel で脅威ハンティングを実行する 
-
+- [Becoming a Microsoft Sentinel Notebooks Ninja - The Series!](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/becoming-a-microsoft-sentinel-notebooks-ninja-the-series/ba-p/2693491)
+ 
 ## 参考（JCERT関係）
 - [JPCERT:侵入型ランサムウェア攻撃を受けたら読むFAQ](https://www.jpcert.or.jp/magazine/security/ransom-faq.html)
 - [JPCERT:侵入型ランサムウェア攻撃の初動対応のポイントをまとめた動画(2022年3月8日)](https://youtu.be/nDOSn_ss7zI)
