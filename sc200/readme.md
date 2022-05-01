@@ -38,8 +38,7 @@
   - [チュートリアル:UEBA を使用して疑わしいユーザー アクティビティを検出する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/tutorial-suspicious-activity)
   - [チュートリアル: 危険な OAuth アプリを調査して修復する](https://docs.microsoft.com/ja-jp/defender-cloud-apps/investigate-risky-oauth)
   - [チュートリアル:機密情報のダウンロードをブロックする](https://docs.microsoft.com/ja-jp/defender-cloud-apps/use-case-proxy-block-session-aad)
-#### Purview
-  - Microsoft 365コンプライアンスが Microsoft Purview と呼ばれるようになり、コンプライアンス領域内のソリューションがブランド変更されました
+#### DLP
 - [データ損失防止ポリシーのアラートを構成および表示する](https://docs.microsoft.com/ja-jp/microsoft-365/compliance/dlp-configure-view-alerts-policies?view=o365-worldwide)
 - [インサイダー リスクの管理](https://docs.microsoft.com/ja-jp/microsoft-365/compliance/insider-risk-management-policies?view=o365-worldwide)
 
