@@ -91,7 +91,10 @@
   
 ## 2.8 モジュール 8 – Microsoft Sentinel で脅威ハンティングを実行する 
 - [Becoming a Microsoft Sentinel Notebooks Ninja - The Series!](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/becoming-a-microsoft-sentinel-notebooks-ninja-the-series/ba-p/2693491)
+- [Getting Started with Azure ML Notebooks and Azure Sentinel](https://github.com/Azure/Azure-Sentinel-Notebooks/blob/8122bca32387d60a8ee9c058ead9d3ab8f4d61e6/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb)
+- [MSTICPy Package Configuration](https://msticpy.readthedocs.io/en/latest/getting_started/msticpyconfig.html)
  
+
 ## 参考（JCERT関係）
 - [JPCERT:侵入型ランサムウェア攻撃を受けたら読むFAQ](https://www.jpcert.or.jp/magazine/security/ransom-faq.html)
 - [JPCERT:侵入型ランサムウェア攻撃の初動対応のポイントをまとめた動画(2022年3月8日)](https://youtu.be/nDOSn_ss7zI)
@@ -105,3 +108,4 @@
 ## 参考
 - [ロシアのサイバー攻撃の政府に対するリスクが拡大: マイクロソフトの年次報告書から](https://news.microsoft.com/ja-jp/2021/10/18/211018-digital-defense-report-2021/)
 - [mimikatz](https://github.com/gentilkiwi/mimikatz)
+- [Defender for Identity（Mimikatzを使った操作をどのように検知しているかがわかる動画](https://www.microsoft.com/videoplayer/embed/RE4AFt9)
