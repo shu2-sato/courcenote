@@ -1,2 +1,2 @@
-# coursenote
-coursenote
+# course notes
+course notes
