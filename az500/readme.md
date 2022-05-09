@@ -206,12 +206,13 @@
   Perf用のメモリーカウンターが正しくないので
   - Memory(*)\Available Memory Mbytes を追加
  
- ```Perf
-| where ObjectName == "Memory" and
-(CounterName == "Available MBytes Memory" or // the name used in Linux records
-CounterName == "Available MBytes") // the name used in Windows records
-| summarize avg(CounterValue) by bin(TimeGenerated, 15min), Computer, _ResourceId // bin is used to set the time grain to 15 minutes
-| render timechart```
+    ```Perf
+    | where ObjectName == "Memory" and
+    (CounterName == "Available MBytes Memory" or // the name used in Linux records
+    CounterName == "Available MBytes") // the name used in Windows records
+    | summarize avg(CounterValue) by bin(TimeGenerated, 15min), Computer, _ResourceId // bin is used to set the time grain to 15 minutes
+    | render timechart
+    ```
   
 - [VM拡張診断の診断設定](pdf/LAB13VM診断設定が必要.pdf)
  Event Tracing for Windows\Total Memory Usage --- Non-Paged Pool
