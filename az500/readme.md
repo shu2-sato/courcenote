@@ -215,10 +215,6 @@
     | render timechart
     ```
   
-- [VM拡張診断の診断設定](pdf/LAB13VM診断設定が必要.pdf)
- Event Tracing for Windows\Total Memory Usage --- Non-Paged Pool
-Event Tracing for Windows\Total Memory Usage --- Paged Pool
-
 **LAB13でエラーが出る時の対応**
 - 2.7.5                 Az.Accounts 
 - 4.25.0                Az.Compute       
