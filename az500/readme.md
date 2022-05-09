@@ -206,7 +206,8 @@
   Perf用のメモリーカウンターが正しくないので
   - Memory(*)\Available Memory Mbytes を追加
  
-    ```Perf
+    ```KQL
+    Perf
     | where ObjectName == "Memory" and
     (CounterName == "Available MBytes Memory" or // the name used in Linux records
     CounterName == "Available MBytes") // the name used in Windows records
