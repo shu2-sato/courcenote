@@ -17,51 +17,361 @@
     
 - [support使用法](pdf/support.pdf)
 
+- [1. **AZ-500**](#1-az-500)
+- [1.1. モジュール01](#11-モジュール01)
+  - [1.1.1. Azure Active Directory](#111-azure-active-directory)
+  - [1.1.2. ハイブリッド ID](#112-ハイブリッド-id)
+  - [1.1.3. Azure AD Identity Protection](#113-azure-ad-identity-protection)
+  - [1.1.4. Azure AD Pricileged Identity Management](#114-azure-ad-pricileged-identity-management)
+  - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス)
+  - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス-1)
+- [1.2. モジュール02](#12-モジュール02)
+- [1.3. モジュール03](#13-モジュール03)
+- [1.4. モジュール04](#14-モジュール04)
+- [ラボ　補足](#ラボ補足)
+
 ## 1.1. モジュール01
-- [Azure Active Directory とは](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/active-directory-whatis)
-- [Azure Active Directory の価格](https://www.microsoft.com/ja-jp/security/business/identity-access-management/azure-ad-pricing?rtc=1)
-- [Azure Active Directory の基礎のドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/)
-- [Azure Active Directory を使用して基本グループを作成してメンバーを追加する](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal?context=azure/active-directory/users-groups-roles/context/ugr-context)
-- [自己管理型の Active Directory Domain Services、Azure Active Directory、およびマネージド Azure Active Directory Domain Services の比較](https://docs.microsoft.com/ja-jp/azure/active-directory-domain-services/compare-identity-solutions)
-- [Azure AD の組み込みロール](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/permissions-reference)
-- [Azure Active Directory の管理単位](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/administrative-units?msclkid=96ef8dc1b80111ecb3108ac36c0152b9)
-- [チュートリアル:グループ メンバーを自動的に追加/削除する](https://docs.microsoft.com/ja-jp/azure/active-directory/enterprise-users/groups-dynamic-tutorial)
-- [Passwordless authentication is now generally available!](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/passwordless-authentication-is-now-generally-available/ba-p/1994700?msclkid=cb0f57efb80211ecb781b280a97fba33)
+### 1.1.1. [Azure Active Directory](https://docs.microsoft.com/ja-jp/learn/modules/azure-active-directory/?wt.mc_id=esi_m2l_content_wwl)
+
+[Azure AD の組み込みロール](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/permissions-reference)
+- **グローバル管理者は5人未満に割り当てるのが推奨**
+- 緊急アクセス用管理者アカウント（Break Glass アカウント）も含む
+
+**特権管理者**：テナントの強い権限のこと
+- グローバル管理者（全体管理者）
+- Exchange サービス管理者
+- SharePoint サービス管理者
+- パスワード管理者/ヘルプデスク管理者
+- ユーザーアカウント管理者
+- その他
+
+**特権アカウント保護のためにやるべきこと**
+- 原則として普段使いアカウントと特権アカウントは分ける
+- 特権アカウント数はできるだけ少なく
+- 特権アカウントを共有しない
+- 必要最小限の権限を付与
+- 多要素認証を有効にする
+- 使うときだけ有効化
   
-**HybridID**
-- [Azure AD Connect とは](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/whatis-azure-ad-connect)
-- [Azure AD Connect クラウド同期とは](https://docs.microsoft.com/ja-jp/azure/active-directory/cloud-sync/what-is-cloud-sync)
-- [Azure Active Directory ハイブリッド ID ソリューションの適切な認証方法を選択する](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/choose-ad-authn)
-- [チュートリアル:オンプレミス環境への Azure Active Directory のセルフサービス パスワード リセットのライトバックを有効にする](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/tutorial-enable-sspr-writeback)
+**試験対策**
+
+[Azure サブスクリプションの課金所有権を譲渡する](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/manage/billing-subscription-transfer)
+
+**グループの種類は2つある**
+- **セキュリティ**
+  - ユーザー、デバイス、グループ、およびサービス プリンシパルをメンバーとして設定でき、ユーザーとサービス プリンシパルを所有者として設定できます。
+
+- **Microsoft365（メールアドレスあり）**
+  - ユーザーのみをメンバーとして設定することができます。 ユーザーとサービス プリンシパルはどちらも、Microsoft 365 グループの所有者にすることができます。
+   - メンバーシップの動的は反映するまでに若干のタイムラグがある
+   - メンバーシップの種類がグレーアウトした場合、一旦グループの種類を変更して戻すと選択できるようになる
+
+**所有者**は、そのグループの責任者的な意味合いを持つ
+
+> グループやポリシーなどは、まず最初に名前付け規則を作成することを推奨。特に、グループなどの管理責任者と利用目的は明確化しておくと後々の管理運用が容易になります。
+
+[名前付け規則を定義する](https://docs.microsoft.com/ja-jp/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
+
+[Azure Active Directory の価格](https://www.microsoft.com/ja-jp/security/business/identity-access-management/azure-ad-pricing?rtc=1)
+
+[Azure Active Directory を使用して基本グループを作成してメンバーを追加する](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal?context=azure/active-directory/users-groups-roles/context/ugr-context)
+
+[自己管理型の Active Directory Domain Services、Azure Active Directory、およびマネージド Azure Active Directory Domain Services の比較](https://docs.microsoft.com/ja-jp/azure/active-directory-domain-services/compare-identity-solutions)
+
+[Azure Active Directory の管理単位](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/administrative-units?msclkid=96ef8dc1b80111ecb3108ac36c0152b9)
+
+[チュートリアル:グループ メンバーを自動的に追加/削除する](https://docs.microsoft.com/ja-jp/azure/active-directory/enterprise-users/groups-dynamic-tutorial)
+
+| 属性名                     | 表示上の名前          |
+| :------------------------- | :-------------------- |
+| userPrincipalName          | ユーザー名            |
+| DisplayName                | 名前                  |
+| GivenName                  | 名                    |
+| surName                    | 姓                    |
+| userType                   | ユーザータイプ        |
+| ObjectID                   | オブジェクトID        |
+| dirsyncEnabled             | ソース                |
+| jobTitle                   | 役職                  |
+| department                 | 部署                  |
+|                            | 管理者*               |
+| BlockCredential            | サインインのブロック* |
+| UsageLocation              | 利用場所              |
+| StreetAddress              | 番地                  |
+| State                      | 都道府県              |
+| Country                    | 国/リージョン         |
+| PhysicalDeliveryOfficeName | 会社                  |
+| City                       | 市区町村              |
+| PostalCode                 | 郵便番号              |
+| telephoneNumber            | 会社電話              |
+| Mobile                     | 携帯電話              |
+|                            | 年齢グループ*         |
+|                            | 未成年および同意*     |
+|                            | ライセンス*           |
+
+[PowerShell Microsoft 365ユーザー アカウントのプロパティを構成する](https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/configure-user-account-properties-with-microsoft-365-powershell?view=o365-worldwide)
+
+```powershell
+Get-AzureADUser -SearchString user01 | Set-AzureADUser -Department IT
+Get-AzureADUser -SearchString user01 | fl *
+```
+
+**パスワードレス認証方法**
+- Windows Hello for Business
+- FIDO2 セキュリティ キー
+- Microsoft Authenticator アプリ
+- 一時アクセスパス 
+
+[Azure Active Directory でパスワードレス認証のデプロイを計画する](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/howto-authentication-passwordless-deployment)
+
+***
+### 1.1.2. [ハイブリッド ID](https://docs.microsoft.com/ja-jp/learn/modules/hybrid-identity/?wt.mc_id=esi_m2l_content_wwl)
+
+**Azure AD Connect**
+[Azure AD Connect:アカウントとアクセス許可](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/reference-connect-accounts-permissions)
+
+Azure AD Connect では、オンプレミス (Windows Server Active Directory) から Azure Active Directory に情報を同期させるために 3 つのアカウントが使用されます。 それらのアカウントを次に示します。
+- AD DS コネクタ アカウント
+- ADSync サービス アカウント
+- Azure AD コネクタ アカウント
+
+Azure AD Connect を実行するためのこれら 3 つのアカウントに加え、Azure AD Connect をインストールするには、次のアカウントが別途必要となります。 次のとおりです。
+- ローカル管理者アカウント
+- **AD DS エンタープライズ管理者（Enterprise Admins）アカウント**
+- **Azure AD 全体（グローバル）管理者アカウント**
+- SQL SA アカウント (任意) 
+
+[Azure Active Directory Connect クラウド同期の FAQ](https://docs.microsoft.com/ja-jp/azure/active-directory/cloud-sync/reference-cloud-sync-faq)
+
+[Azure AD Connect とクラウド同期の比較](https://docs.microsoft.com/ja-jp/azure/active-directory/cloud-sync/what-is-cloud-sync)
+
+[Azure AD Connect クラウド同期の前提条件](https://docs.microsoft.com/ja-jp/azure/active-directory/cloud-sync/how-to-prerequisites)
+
+[Azure AD Connect の通信要件](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/reference-connect-ports)
+
+**認証オプション**
+- パスワードハッシュ同期
+- パススルー認証
+- AD FS
   
-**Identity** **Protection**
-- [Identity Protection とは](https://docs.microsoft.com/ja-jp/azure/active-directory/identity-protection/overview-identity-protection)
-- [リスクの種類と検出](https://docs.microsoft.com/ja-jp/azure/active-directory/identity-protection/concept-identity-protection-risks#risk-types-and-detection)
-- [動作のしくみ: Azure AD Multi-Factor Authentication](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/concept-mfa-howitworks)
-- [条件付きアクセスとは](https://docs.microsoft.com/ja-jp/azure/active-directory/conditional-access/overview)
-- [Azure AD アクセス レビューとは](https://docs.microsoft.com/ja-jp/azure/active-directory/governance/access-reviews-overview)
-- [Azure AD のセキュリティの既定値群](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
+[チュートリアル:オンプレミス環境への Azure Active Directory のセルフサービス パスワード リセットのライトバックを有効にする](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/tutorial-enable-sspr-writeback)
 
-**PIM**
-- [ゼロトラストという戦術の使い方(IPA)](https://www.ipa.go.jp/icscoe/program/core_human_resource/final_project/zero-trust.html?msclkid=ca679eb7b9de11ec95013ea55f031876)
-- [ゼロトラスト導入指南書(IPA) 上記リンクのPDF](https://www.ipa.go.jp/files/000092243.pdf)
-- [先回り型のセキュリティをゼロ トラストで取り入れる](https://www.microsoft.com/ja-jp/security/business/zero-trust)
-- [Microsoft 365 を用いたゼロ トラスト ネットワークの実現](https://docs.microsoft.com/ja-jp/archive/blogs/jpazureid/building-zero-trust-networks-with-microsoft-365)
-- [Azure AD Privileged Identity Management とは](https://docs.microsoft.com/ja-jp/azure/active-directory/privileged-identity-management/pim-configure)
-- [PIM ダッシュボード](https://portal.azure.com/#blade/Microsoft_Azure_PIMCommon/ResourceMenuBlade/aadoverview/resourceId//resourceType/tenant/provider/aadroles/defaultId/roles)
-- [Security best practices for Azure solution](https://azure.microsoft.com/mediahandler/files/resourcefiles/security-best-practices-for-azure-solutions/Azure%20Security%20Best%20Practices.pdf)
-- [Azure Policy とは](https://docs.microsoft.com/ja-jp/azure/governance/policy/overview)
-- [Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
+[NIST SP800-207 「ゼロトラスト・アーキテクチャ」の解説と日本語訳](https://www.pwc.com/jp/ja/knowledge/column/awareness-cyber-security/zero-trust-architecture-jp.html)
 
-**エンターブライズ**  **ガバナンス**
-- [サブスクリプション決定ガイド](https://docs.microsoft.com/ja-jp/azure/cloud-adoption-framework/decision-guides/subscriptions/#modeling-your-organization)
-- [Azure 管理グループのドキュメント](https://docs.microsoft.com/ja-jp/azure/governance/management-groups/)
-- [Azure Policy のドキュメント](https://docs.microsoft.com/ja-jp/azure/governance/policy/)
-- [従来のサブスクリプション管理者ロール、Azure ロール、および Azure AD ロール](https://docs.microsoft.com/ja-jp/azure/role-based-access-control/rbac-and-directory-admin-roles)
+[ゼロトラストという戦術の使い方(IPA)](https://www.ipa.go.jp/icscoe/program/core_human_resource/final_project/zero-trust.html?msclkid=ca679eb7b9de11ec95013ea55f031876)
 
-**memo**
-- [AZ-500 Azure ADまとめ](pdf/AZ-500%20Azure%20ADまとめ.pdf)
-- [Azure AD Connect](pdf/Azure%20AD%20Connect.pdf)
+[Microsoft 365 を用いたゼロ トラスト ネットワークの実現](https://docs.microsoft.com/ja-jp/archive/blogs/jpazureid/building-zero-trust-networks-with-microsoft-365)
+
+***
+### 1.1.3. [Azure AD Identity Protection](https://docs.microsoft.com/ja-jp/learn/modules/azure-ad-identity-protection/?wt.mc_id=esi_m2l_content_wwl)
+
+[Azure AD Identity Protection のリスク](https://docs.microsoft.com/ja-jp/azure/active-directory/identity-protection/concept-identity-protection-risks)
+
+**リスクの種類**
+- ユーザー（リアルタイムとオフライン）
+  - **漏洩されていないかを確認する。** 具体的には、MSが様々な情報を（ダークウェブなど）監視して合致するものがあるか？
+- サインイン（リアルタイムとオフライン）
+  - **本来のユーザーとは異なるユーザーからサインインしている可能性がある。** 匿名IPアドレスなど（上記リンク参照）を使用しているなどがある。
+
+**認証の3要素**
+- 知識情報（Something You Know）
+- 所有情報（Something You Have)
+- 生体情報（Something You Are）
+
+[セキュリティの既定値群](https://docs.microsoft.com/ja-jp/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
+
+[Azure AD で緊急アクセス用管理者アカウントを管理する](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/security-emergency-access)
+
+**条件付きアクセスポリシー(CA)**
+-
+
+**条件付きアクセスの動作**
+- 動作はブラックリスト方式であるため、設計時に要考慮
+  - <span style="color: red; ">明示的にポリシーを設定しない限り、アクセス許可</span>
+  - CAポリシーで設定できるのは
+    - アクセスのブロック
+    - アクセス権の付与
+- [割り当て] と [アクセス制御] の二つの要素でユーザー動作を制御
+  - [割り当て]で「すべてのユーザー」、「すべてのクラウドアプリ」を対象にすると、管理者を締め出してしまう可能性あり（Azure AD Connect の同期用アカウントにも要注意）
+  - 「すべてのユーザー」、「すべてのクラウドアプリ」 に対し、社外からのアクセスをブロックすると、Intune 登録、Graph などがブロックされてしまう
+    - Microsoft Intune Enrollment クラウドアプリを除外してもダメ
+- アクセスポリシーに順序はなく、すべてが評価される
+    - CAポリシーに優先順位という概念はない
+    - すべてのポリシーが評価され、割り当て条件に合致したサインインイベントに対し、制御がすべて適用される
+    - <span style="color: red; ">許可よりもブロックが勝つ</span>
+- [対象外] うまく使って割り当て条件を指定する
+  - <span style="color: red; ">対象外が勝つ</span>（すべてのユーザーが対象でも対象外に設定したユーザーが勝つ）
+- 問題があったら “サインインログ” を確認すると知りたいことはほぼすべてわかる
+  - AADの監視＞サインイン（**条件付きアクセス項目**を参照する）
+
+> **CAのポイント**
+> - CAポリシーに優先順位という概念はない
+> - すべてのポリシーが評価され、割り当て条件に合致したサインインイベントに対し、制御がすべて適用される
+> - 許可よりもブロックが勝つ
+
+
+- [割り当て] ベストプラクティス
+  - すべてを対象にする際には細心の注意を
+  - 対象を除外し、管理者は別ポリシーで保護
+  - 除外には、ディレクトリ ロール を利用する
+  - 不測の事態に備え、Break Glass アカウントを用意
+
+- [アクセス制御] ベストプラクティス
+  - ブロックの代わりに、「要 準拠デバイス」をお奨め
+    - Intune 登録はブロックされない
+
+**Break Glass アカウントとは**
+- 不測の事態に影響を受けない緊急用 全体管理者アカウント
+  - フェデレーションサービスの障害によるログイン不可
+  - MFA 利用不可 - 電話網障害等
+  - 管理者アカウント保持者の退職等
+
+**ベストプラクティス**
+- クラウドアカウント（例: bg@contoso.onmicrosoft.com）を利用
+- 永続管理者（PIMの対象ロールにしない）を利用
+- すべての 条件付きアクセス、MFA 対象から除外
+- 16 文字以上のランダムに生成されたパスワードを利用
+- パスワードは紙に書いて、2つ以上に切ってそれぞれ金庫に保管
+- アカウント利用を定期的に監査
+- アカウントを最低 90 日に一度、利用可能か確かめる
+
+**管理者に MFA 強制するとバッチが動かなくなる？**
+- 管理者アカウントでバッチを動かすことは、セキュリティリスクが高いため、すぐにやめましょう
+
+**ベストプラクティス(この順番で実装を検討)**
+1. Managed Identity を利用する（モジュール3で説明）
+2. サービスプリンシパル を利用した証明書認証を利用する
+3. やむなくユーザーアカウントを利用する場合にも要保護対策
+
+[Azure AD アクセス レビューとは](https://docs.microsoft.com/ja-jp/azure/active-directory/governance/access-reviews-overview)
+
+[条件付きアクセス:デバイス プラットフォーム](https://docs.microsoft.com/ja-jp/azure/active-directory/conditional-access/concept-conditional-access-conditions#device-platforms)
+  
+***
+### 1.1.4. [Azure AD Pricileged Identity Management](https://docs.microsoft.com/ja-jp/learn/modules/azure-ad-privileged-identity-management/?wt.mc_id=esi_m2l_content_wwl)
+
+**ゼロトラストの指導原則**
+- 明示的に確認（常に認証と承認）
+- 最低特権アクセス（JIT、JEA）、リスクベースの適応型ポリシー、データ保護によるユーザーアクセス制限
+- 侵害の想定（ネットワークセグメンテーションによる横移動の防止）
+
+**特権アカウント保護のためにやるべきこと**
+- 原則として普段使いアカウントと特権アカウントは分ける
+- 特権アカウント数はできるだけ少なく
+- 特権アカウントを共有しない
+- **必要最小限の権限を付与**
+- **多要素認証を有効にする**
+- **使うときだけ有効化**
+
+**PIMの主な機能の確認**
+- JIT（Just-In-Time）によって、作業時のみ権限を割り当てる。これは0.5～24時間まで
+- リソースへの期限付きアクセス（権限を割り当てる際にあらかじめ有効期間を設定する）
+- その権限を有効にするための承認プロセス
+- 特権アカウントを使用する際に、MFAを確実に使用（全ユーザーがMFAを使用している場合＜すでにMFAにてログインしている＞は再度サインインする必要なし）
+- そのアカウントのロールが必要な理由を明確化する。これによって、監査が容易になります。
+- 特権アカウントが割り当てられた際の通知
+- アクセスレビューによる、特権アカウントの割り当て把握
+- 監査履歴をしようすることで、PIMイベントを継続的に追跡可能。外部監査にも利用できる。
+
+[Azure AD Privileged Identity Management とは](https://docs.microsoft.com/ja-jp/azure/active-directory/privileged-identity-management/pim-configure)
+
+**アクセスレビュー**
+
+Identity Governanceは、「適切なユーザーに」 「適切なアクセス権を」 「適切な期間のみ」 を実現するもの。
+
+- アクセスライフサイクル
+  - エンタイトルメント管理（アクセス権の付与をプロセス化）
+  - **アクセスレビュー（アクセス権のはく奪をプロセス化）**
+
+**MFA の検証結果**
+
+MFAを要求する設定は以下の通り
+1. AAD>セキュリティ>MFA>追加のクラウドベースのMFA設定（各ユーザーに対して多要素認証を要求する）
+1. AAD>セキュリティ>サインインリスクポリシー（ポリシーで多要素認証を要求する）
+1. AAD>セキュリティ>条件付きアクセス（アクセス制御で多要素認証を要求する）
+
+> - サインインリスクポリシーでMFAを要求した場合、追加のクラウドベースのMFA設定で許可していない場合は **Block** される。
+> - 条件付きアクセスで多要素認証を要求する場合は、追加のクラウドベースのMFA設定で無効状態でもMFA認証を要求される（MFA設定画面に遷移する）。
+
+***
+### 1.1.5. [エンタープライズ ガバナンス](https://docs.microsoft.com/ja-jp/learn/modules/enterprise-governance/?wt.mc_id=esi_m2l_content_wwl)
+
+**Azure ポリシー**
+Azureポリシーを使用して、あるべき姿を強制する（コンプライアンス）ことができる。そのポリシーをまとめたものがイニシアティブとなる。
+
+Azureポリシーの機能には以下の3つの大きな柱があります
+- 強制とコンプライアンス
+  - 設定したポリシーに対してすべてのリソースに対するコンプライアンス評価としてコンプライアンス状態を確認できる
+- ポリシーを大規模に運用
+  - 管理グループにポリシーを適用できることで、1つのポリシーを数百のサブスクリプションとそのすべてのリソースに対して適用できる
+- 修復
+  - コンプライアンスが非準拠のリソースを自動的に修復する修復ポリシーを使用できる
+  - 修復時にマネージドIDが必要な効果は**DeployIfNotExists**と**Modify**
+
+[Azure Policy の効果について](https://docs.microsoft.com/ja-jp/azure/governance/policy/concepts/effects)
+
+[Azure Policy の定義の構造](https://docs.microsoft.com/ja-jp/azure/governance/policy/concepts/definition-structure)
+
+[チュートリアル:コンプライアンスを強制するポリシーの作成と管理](https://docs.microsoft.com/ja-jp/azure/governance/policy/tutorials/create-and-manage)
+
+**Azure リソースの組み込みロール**
+
+組み込みロール一覧
+```powershell
+Get-AzRoleDefinition | ft name
+```
+AD Role の確認例
+```powershell
+Get-AzRoleDefinition 'Owner'
+Get-AzRoleDefinition 'contributor'
+Get-AzRoleDefinition 'user access administrator'
+```
+
+[Azure カスタム ロール](https://docs.microsoft.com/ja-jp/azure/role-based-access-control/custom-roles)
+
+[Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
+
+[Azure サブスクリプションの課金所有権の譲渡の概要](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/understand/subscription-transfer)
+
+***
+
+### 1.1.5. [エンタープライズ ガバナンス](https://docs.microsoft.com/ja-jp/learn/modules/enterprise-governance/?wt.mc_id=esi_m2l_content_wwl)
+
+**Azure ポリシー**
+Azureポリシーを使用して、あるべき姿を強制する（コンプライアンス）ことができる。そのポリシーをまとめたものがイニシアティブとなる。
+
+Azureポリシーの機能には以下の3つの大きな柱があります
+- 強制とコンプライアンス
+  - 設定したポリシーに対してすべてのリソースに対するコンプライアンス評価としてコンプライアンス状態を確認できる
+- ポリシーを大規模に運用
+  - 管理グループにポリシーを適用できることで、1つのポリシーを数百のサブスクリプションとそのすべてのリソースに対して適用できる
+- 修復
+  - コンプライアンスが非準拠のリソースを自動的に修復する修復ポリシーを使用できる
+  - 修復時にマネージドIDが必要な効果は**DeployIfNotExists**と**Modify**
+
+[Azure Policy の効果について](https://docs.microsoft.com/ja-jp/azure/governance/policy/concepts/effects)
+
+[Azure Policy の定義の構造](https://docs.microsoft.com/ja-jp/azure/governance/policy/concepts/definition-structure)
+
+[チュートリアル:コンプライアンスを強制するポリシーの作成と管理](https://docs.microsoft.com/ja-jp/azure/governance/policy/tutorials/create-and-manage)
+
+**Azure リソースの組み込みロール**
+
+組み込みロール一覧
+```powershell
+Get-AzRoleDefinition | ft name
+```
+AD Role の確認例
+```powershell
+Get-AzRoleDefinition 'Owner'
+Get-AzRoleDefinition 'contributor'
+Get-AzRoleDefinition 'user access administrator'
+```
+
+[Azure カスタム ロール](https://docs.microsoft.com/ja-jp/azure/role-based-access-control/custom-roles)
+
+[Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
+
+[Azure サブスクリプションの課金所有権の譲渡の概要](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/understand/subscription-transfer)
 
 **参考AAD関連**
 - [Azure AD Webinar ](http://aka.ms/azureadwebinar)
@@ -69,6 +379,7 @@
 - [EMS Blog ](http://aka.ms/emsblog/)
 - [Azure AD Tips 集](http://aka.ms/aadtips)
 - [Microsoft ID プラットフォームのドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/)
+***
 
 ## 1.2. モジュール02
 
