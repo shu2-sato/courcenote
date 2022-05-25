@@ -12,11 +12,15 @@
     - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
     - ラボ環境[LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)**今回新しく作ったMSアカウントでログインしてください。**
     - トレーニングコードは、講師から案内があります。
-    - AzurePass サブスクリプションはラボ環境からアクティベートします。
+    - AzurePass サブスクリプションはラボ環境からアクティベートします。[トレーニング用サブスクリプションの取得](https://www.microsoftazurepass.com/)
     - ラボ環境が英語の場合[ラボ環境キーボード変更](pdf/ラボ環境キーボード変更.pdf)
     
 - [support使用法](pdf/support.pdf)
 
+[AZ-500補足資料](https://github.com/naonao71/note/blob/main/AZ-500/AZ-500%E8%A3%9C%E8%B6%B3%E8%B3%87%E6%96%99v1.2.pdf)
+
+- ローカルにダウンロードする
+  
 - [1. **AZ-500**](#1-az-500)
 - [1.1. モジュール01](#11-モジュール01)
   - [1.1.1. Azure Active Directory](#111-azure-active-directory)
@@ -856,7 +860,7 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 
 **LAB4テナント削除**
 - [テナント削除の注意](pdf/テナント削除.pdf)
- 無効化できないので、期限切れまで削除できません。
+ P2の試行ライセンスが、無効化できないので、30日間の期限切れまで削除できません。
 
 **LAB13のVMメモリー使用状況**
 - タスク 4: 仮想マシン イベントおよびパフォーマンス データを収集する
