@@ -32,7 +32,14 @@
   - [1.2.3. ホストセキュリティ](#123-ホストセキュリティ)
   - [1.2.4. コンテナーセキュリティ](#124-コンテナーセキュリティ)
 - [1.3. モジュール03](#13-モジュール03)
+  - [1.3.1. Azure Key Vault](#131-azure-key-vault)
+  - [1.3.2. アプリケーションのセキュリティ](#132-アプリケーションのセキュリティ)
+  - [1.3.3. ストレージ セキュリティ](#133-ストレージ-セキュリティ)
+  - [1.3.4. データベース セキュリティ](#134-データベース-セキュリティ)
 - [1.4. モジュール04](#14-モジュール04)
+  - [1.4.1. Azure Monitor](#141-azure-monitor)
+  - [1.4.2. Azure Security Center](#142-azure-security-center)
+  - [1.4.3. Microsoft Sentinel](#143-microsoft-sentinel)
 - [ラボ　補足](#ラボ補足)
 
 ## 1.1. モジュール01
@@ -576,73 +583,271 @@ MDE非対応
 ***
 
 ## 1.3. モジュール03
-**KeyVault**
-- [Key Vault の価格](https://azure.microsoft.com/ja-jp/pricing/details/key-vault/)
-- [Azure Key Vault の認証](https://docs.microsoft.com/ja-jp/azure/key-vault/general/authentication)
-- [キーについて](https://docs.microsoft.com/ja-jp/azure/key-vault/keys/about-keys)
-- [HSM で保護されたキーを Key Vault にインポートする](https://docs.microsoft.com/ja-jp/azure/key-vault/keys/hsm-protected-keys)
-  
-**APP**
-- [Microsoft ID プラットフォームとは](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-overview)
-- [Microsoft Graph セキュリティ API の概要](https://docs.microsoft.com/ja-jp/graph/security-concept-overview)
-- [Azure リソースのマネージド ID とは](https://docs.microsoft.com/ja-jp/azure/active-directory/managed-identities-azure-resources/overview)
-- [Graph Exploer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Microsoft Graph API で Postman を使用する](https://docs.microsoft.com/ja-jp/graph/use-postman)
-- [動画：Getting started with Microsoft Graph Postman workspace](https://www.youtube.com/watch?v=3RTHY3jScmA)
-- [JWT Decoder(JSTOOLSET)](https://www.jstoolset.com/jwt)
-  
-**Storage**
-- [すべての地域の Azure リージョン間レプリケーションのペアリング](https://docs.microsoft.com/ja-jp/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies)
-- [Azure Storage に対する要求を承認する](https://docs.microsoft.com/ja-jp/rest/api/storageservices/authorize-requests-to-azure-storage)
-- [Shared Access Signatures (SAS) を使用して Azure Storage リソースへの制限付きアクセスを許可する](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)
-- [保存データに対する Azure Storage 暗号化](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-service-encryption)
-- [クイック スタート:Azure Storage Explorer を使用して BLOB を作成する](https://docs.microsoft.com/ja-jp/azure/storage/blobs/quickstart-storage-explorer)
 
-**SQLServer**
-- [SQLServerでAzure Active Directory 認証を使用する](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/authentication-aad-overview)
-- [Azure SQL Database および Azure Synapse Analytics の監査](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/auditing-overview)
-- [Microsoft Defender for SQL の概要](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-sql-introduction)
-- [動的データ マスク](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview)
-- [Always Encrypted](https://docs.microsoft.com/ja-jp/sql/relational-databases/security/encryption/always-encrypted-database-engine?view=sql-server-ver15)
-- [Azure SQL Analytics (プレビュー) を使用した Azure SQL Database の監視](https://docs.microsoft.com/ja-jp/azure/azure-monitor/insights/azure-sql)
-  
+### 1.3.1. [Azure Key Vault](https://docs.microsoft.com/ja-jp/learn/modules/azure-key-vault/?wt.mc_id=esi_m2l_content_wwl)
+
+Azure keyコンテナー（Azure Key Vault）は、クラウドアプリケーションやサービスが使用する暗号化キーやシークレットの保護に役立ちます。シークレットとは、暗号化処理や認証に使用する機密性の高い情報のことで、具体的にはトークン、パスワード、証明書、API キーなどを指します。
+
+Azure keyコンテナー（Azure Key Vault）では
+- シークレット管理
+- キー管理
+- 証明書の管理
+- HSMを使用したシークレットの格納（プレミアムのみ）
+を扱うことができる。
+
+> **Point**
+> ストレージアカウントでカスタマーマネージドキーをサポートしているサービスは
+> - BLOBストレージ
+> - Azure Files
+
+[保存データに対する Azure Storage 暗号化](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-service-encryption)
+
+[Azure Key Vault のバックアップ](https://docs.microsoft.com/ja-jp/azure/key-vault/general/backup?tabs=azure-cli)
+
+[Azure Key Vault の認証](https://docs.microsoft.com/ja-jp/azure/key-vault/general/authentication)
+
+[HSM で保護されたキーを Key Vault にインポートする](https://docs.microsoft.com/ja-jp/azure/key-vault/keys/hsm-protected-keys)
+***
+
+### 1.3.2. [アプリケーションのセキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/application-security/?wt.mc_id=esi_m2l_content_wwl)
+
+AzureADとの連携シナリオ
+- アプリのユーザー認証/認可に Azure AD を利用したい
+- 開発したアプリに Azure AD 上のアプリケーション (O365 含む) の API アクセス許可を与えたい
+- 開発したアプリの API を Azure AD で保護したい
+
+このような代表的なシナリオの実現とそのアプリケーション開発/管理の機能を提供している機能群を Microsoft Identity Platform と呼んでいる
+
+認証の仕組みを実装する場合は以下を提供している。
+MSAL(Microsoft Authentication Library：Microsoft 認証ライブラリ）を取り込むことでMicrosoft ID プラットフォームエンドポイントを使用できる（マイクロソフトアカウント、組織アカウント、ソーシャルまたはローカルアカウント）
+
+**MSAL は、Microsoft ID プラットフォームと併せて使用する際にお勧めの認証ライブラリ**
+
+[Microsoft ID プラットフォームとは](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-overview)
+
+[Microsoft ID プラットフォームにアプリケーションを登録する](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/quickstart-register-app)
+
+> **Point**
+> - エンタープライズアプリケーション（サービスプリンシパル）
+> - アプリの登録（アプリケーションオブジェクト）
+
+[Azure Active Directory における管理タスク別の管理者ロール](https://docs.microsoft.com/ja-jp/azure/active-directory/roles/delegate-by-task)
+
+**Microsoft Graph には２種類のアクセス許可方法があります。**
+- 委任されたアクセス許可：
+  - **サインイン済みユーザーが存在するアプリ**で使用されます。この場合、ユーザーはアプリが要求するアクセス許可に同意して、アプリはMicrosoft Graph を呼び出すときにサインインユーザーとして機能できます。
+- アプリケーションのアクセス許可：
+  - サインイン済みユーザーが存在せずに実行されるアプリ (**バックグラウンド サービスやデーモンとして実行されるアプリなど**) で使用されます。アプリケーションの権限は、管理者のみが同意できます。
+
+[Graph Explorer - Microsoft Graph](https://developer.microsoft.com/en-us/graph/graph-explorer)
+
+[Microsoft ID プラットフォームでのアクセス許可と同意](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-permissions-and-consent#permission-types)
+
+[Azure リソースのマネージド ID と Azure 仮想マシンの連携](https://docs.microsoft.com/ja-jp/azure/active-directory/managed-identities-azure-resources/how-managed-identities-work-vm)
+
+**サービスプリンシパルとマネージドIDの違い**
+
+|                                                      | サービスプリンシパル                             | マネージドID                            |
+| :--------------------------------------------------- | :----------------------------------------------- | :-------------------------------------- |
+| IDの管理                                             | AAD                                              | AAD                                     |
+| 登録・運用                                           | 複雑                                             | 容易                                    |
+| オンプレミスアプリケーションまたはサービスのサポート | サポート                                         | ×                                       |
+| ポイント                                             | オンプレミスアプリケーションを使用するときに利用 | Azure内でクローズする認証はこちらを利用 |
+
+結論から言うと、Azure内で認証を使用する場合はマネージドIDを使用する。しかし、オンプレミスアプリケーションは未サポートなので、その場合はサービスプリンシパルを使用する。
+
+[JSON Web Tokens - jwt.io](https://jwt.io/)
+
+[Azure App Service に対する TLS 相互認証の構成](https://docs.microsoft.com/ja-jp/azure/app-service/app-service-web-configure-tls-mutual-auth)
+
+[動画：Getting started with Microsoft Graph Postman workspace](https://www.youtube.com/watch?v=3RTHY3jScmA)
+
+***
+### 1.3.3. [ストレージ セキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/storage-security/?wt.mc_id=esi_m2l_content_wwl)
+
+[すべての地域の Azure リージョン間レプリケーションのペアリング](https://docs.microsoft.com/ja-jp/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies)
+
+**ストレージサービスの種類：**
+- Azureコンテナー（BLOBストレージ-バイナリラージオブジェクト）
+  - 画像またはドキュメントを保存して、直接ブラウザから参照可能。また仮想マシンのディスクの保存先としても活用されている。
+- Azure Files
+  - SMBを使用したファイル共有として使用。
+- Table Storage
+  - KVS（Key Value Storage）の環境を提供。Azure Cosmos DBの一部として使用するなどが可能
+- Queue Storage
+  - メッセージのキュー環境（格納と取得）に使用。例として、Azure Functionsと一緒に使用するなどが考えられる（プログラミング）。
+
+**承認オプション**
+- アカウント共有キー
+- SAS（Shared Access Signatures）
+- Azure Active Directory
+- Active Directory（SMBのみ）
+- 匿名アクセス（PublicなBlob）
+アカウント共有キーとSASに関しては、すべてのストレージサービスで使用できます。BlobとキューはAADをサポートしています。
+
+Blobを使用する際のアクセス認証方法の推奨方法は以下の通り
+- AAD＞SAS＞共有キー＞匿名アクセス
+
+SAS の種類
+
+| SAS              | AUTH                     | SCOPE           |
+| :--------------- | :----------------------- | :-------------- |
+| アカウントSAS    | ストレージアカウントキー | Storage account |
+| サービスSAS      | ストレージアカウントキー | Single resource |
+| ユーザー委任 SAS | Azure AD                 | Single resource |
+
+保存されたアクセスポリシー
+ストレージアカウントに作成した各ストレージコンテナ個別に設定しているアクセスポリシーのこと。
+
+***
+
+### 1.3.4. [データベース セキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/sql-database-security/?wt.mc_id=esi_m2l_content_wwl)
+
+[Azure SQL Database と SQL Managed Instance のセキュリティ機能の概要](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/security-overview)
+
+**ユーザーの種類について**
+
+SQL Serverには大きく分けて2種類のユーザーが存在しています。
+- ログインするユーザー（テキストでは、ログインとして紹介）
+  - SQL Server（インスタンス）へログインする際に使用するユーザーとなります。
+- データベースを利用するユーザー（テキストでは、ユーザーアカウントとして紹介）
+  - こちらはデータベース毎に作成するユーザーとなります。
+
+ベストプラクティスとしては、各DBごとにユーザー作成する（テキストでは、包含データベースユーザーと記載）になります。この方法ならSQLインジェクションなどの脆弱性があった場合に、他のDBに波及せず侵害のリスクを軽減することができる。
+
+[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
+
+**SQL Database のファイアウォールの考え方**
+
+SQL Database のファイアウォールは、利用する接続を追記する設定方法。よって、基本はブロックだが、登録されていればアクセス可能ですよ！になる。
+- SQL DBのファイアウォールが2つ存在する。
+  - SQLサーバーのファイアウォールと、SQL Databaseのファイアウォール。
+- Portalで設定できるのはSQLサーバーのファイアウォールである。
+- SQL Databaseのファイアウォールは、Portalから操作はできない。SQL文を書いてFWをコントロールする。
+- DBレベル、または、サーバーレベルのファイアウォールのどちらかで許可されていればアクセスできる。両方ではないことに注意。
+先に評価されるのは、DBレベル。
+
+ベストプラクティスとしては、可能な限りデータベースレベルのIPファイアウォール規則を使用する。
+
+[データベースレベルのファイアウォール規則](https://docs.microsoft.com/ja-jp/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database?view=azuresqldb-current)
+
+[ポータルを使用して仮想ネットワーク規則を作成する](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/vnet-service-endpoint-rule-overview#anchor-how-to-by-using-firewall-portal-59j)
+
+[Azure SQL Database と Azure Synapse Analytics の接続アーキテクチャ](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/connectivity-architecture)
+
+**監査の設定**
+- サーバーレベル
+  - 既定の監査ポリシーには、すべてのアクションと次のアクション グループのセットが含まれます。これは、データベースに対して実行されたすべてのクエリとストアド プロシージャに加えて、成功および失敗したログインを監査（管理の変更やログオンおよびログオフの操作などのサーバーの操作が含まれます）します。
+- データベースレベル
+  - これらのアクションには、データ操作言語 (DML) とデータ定義言語 (DDL) の操作が含まれます。
+
+通常は、サーバーポリシーのみONにする。
+- データベースレベルの監査の設定の有無にかかわらず、データベースレベルの監査が行われる。
+
+[SQL Server 監査のアクション グループとアクション](https://docs.microsoft.com/ja-jp/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions?view=sql-server-ver15)
+
+[Azure SQL Database および Azure Synapse Analytics の監査](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/auditing-overview)
+
+[動的データ マスク](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview)
+
+[SQL Database、SQL Managed Instance および Azure Synapse Analytics の透過的なデータ暗号化](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/transparent-data-encryption-tde-overview?tabs=azure-portal)
+
+[Transparent data encryption or always encrypted?](https://azure.microsoft.com/en-in/blog/transparent-data-encryption-or-always-encrypted/)
+
+|                                           | Always Encrypted         | TDE                                    |
+| :---------------------------------------- | :----------------------- | :------------------------------------- |
+| 保管データを保護                          | 〇                       | 〇                                     |
+| 使用中のデータを保護                      | 〇                       | ×                                      |
+| SQL 管理者および管理者からデータを保護    | 〇                       | ×                                      |
+| データはクライアント側で暗号化/復号される | 〇                       | ×                                      |
+| データはサーバー側で暗号化/復号される     | ×                        | 〇                                     |
+| 列レベルで暗号化                          | 〇                       | ×（データベース全体を暗号化）          |
+| アプリケーションに対して透過的            | △（部分的）              | 〇                                     |
+| 暗号化オプション                          | 〇                       | ×                                      |
+| 暗号化キー管理                            | カスタマーマネージドキー | サービスまたはカスタマーマネージドキー |
+| 使用中のキー保護                          | 〇                       | ×                                      |
+| ドライバが必要                            | 〇                       | ×                                      |
+
+[Azure Key Vault を使用した Always Encrypted の構成](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-azure-key-vault-configure?tabs=azure-powershell)
+
+**CEKの種類**
+- 決定論的（Deterministic）＜テキストでは確定的暗号化＞
+  - 任意のプレーンテキスト値に対して常に同じ暗号化された値を生成します。確定的暗号化を使用すると、ポイントルックアップ、等価結合、暗号化された列のグループ化およびインデックス付けが可能になります。
+- ランダム化（Randomized）
+  - 予測不可能な方法でデータを暗号化する方法を使用します。
+
+**クエリに関して**
+- Deterministicの場合は、当該列の等値比較のみ可能
+- Randomizedの場合は、当該列によるクエリ不可
+
+[Always Encrypted](https://docs.microsoft.com/ja-jp/sql/relational-databases/security/encryption/always-encrypted-database-engine?view=sql-server-ver15#feature-details)
+
+[Always Encrypted のキー管理の概要](https://docs.microsoft.com/ja-jp/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted?view=sql-server-ver15)
+
+***
 
 ## 1.4. モジュール04
-**Monitor**
-- [Azure Monitor メトリックの概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/essentials/data-platform-metrics)
-- [Azure Monitor ログの概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs)
-- [アラート概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/alerts/alerts-overview)
-- [Azure Monitor の Log Analytics の概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/logs/log-analytics-overview)
-- [Kusto クエリ言語 (KQL) の概要](https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/query/)
-- [Azure プラットフォーム ログの概要](https://docs.microsoft.com/ja-jp/azure/azure-monitor/essentials/platform-logs-overview)
-- [Azure Monitor の Log Analytics エージェントのデータ ソース](https://docs.microsoft.com/ja-jp/azure/azure-monitor/agents/agent-data-sources)
-- [azure monitoring log demo](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade)
 
-**Defender**
-- [意図](https://docs.microsoft.com/ja-jp/azure/security-center/alerts-reference#intentions
-)
-- [Microsoft Defender for Cloud とは](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Microsoft Defender for Cloud の強化されたセキュリティ機能](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/enhanced-security-features-overview)
-- [Azure セキュリティ ベンチマークの概要](https://docs.microsoft.com/ja-jp/security/benchmark/azure/introduction)
-- [セキュリティ ポリシーの管理](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/tutorial-security-policy)
-- [セキュリティの推奨事項 - リファレンス ガイド](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/recommendations-reference)
-- [Just-In-Time アクセスを使用して管理ポートをセキュリティで保護する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc)
-- [セキュリティ アラート - リファレンス ガイド](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/alerts-reference)
-- [クラウドトリガーに対する Microsoft Defender への応答を自動化する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/workflow-automation)
-- [Microsoft Power Automate と Azure Logic Apps の比較](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs?msclkid=edcdfb9fb7d211ecaa09f53cbbd86280#compare-microsoft-power-automate-and-azure-logic-apps)
+### 1.4.1. [Azure Monitor](https://docs.microsoft.com/ja-jp/learn/modules/azure-monitor/?wt.mc_id=esi_m2l_content_wwl)
 
-**Sentinel**
-- [Microsoft Sentinel とは](https://docs.microsoft.com/ja-jp/azure/sentinel/overview)
-- [すべてのデータに接続する](https://docs.microsoft.com/ja-jp/azure/sentinel/overview#connect-to-all-your-data)
-- [Workbooks](https://docs.microsoft.com/ja-jp/azure/sentinel/overview#workbooks)
-- [Microsoft セキュリティ アラートからインシデントを自動的に作成する](https://docs.microsoft.com/ja-jp/azure/sentinel/create-incidents-from-alerts)
-- [チュートリアル: Microsoft Sentinel でオートメーション ルールとプレイブックを使用する](https://docs.microsoft.com/ja-jp/azure/sentinel/tutorial-respond-threats-playbook)
-- [Microsoft Sentinel を使用して脅威を追求する](https://docs.microsoft.com/ja-jp/azure/sentinel/hunting)
+[Kusto の概要](https://docs.microsoft.com/ja-jp/azure/data-explorer/kusto/concepts/)
 
-**Memo**
-- [Microsoft Defender for Cloud まとめ](pdf/Microsoft%20Defender%20for%20Cloud%20まとめ.pdf)
-- [Microsoft Sentinel まとめ](pdf/Microsoft%20Sentinel%20まとめ.pdf)
+[Log Analytics Demo Site](https://aka.ms/lademo)
 
+収集するデータのソースは階層で考えることができます。
+アプリケーションは、最上位に当たります。そして、下にある各階層はAzureプラットフォームの各コンポーネントになります。
+
+| 階層レベル                         | 説明                                                                                                                                                               | 収集方法                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| :--------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| アプリケーション コード            | 実際のアプリケーションとコードのパフォーマンスと機能に関するデータ (パフォーマンス トレース、アプリケーション ログ、ユーザー テレメトリを含む)。                   | インストルメンテーション パッケージをインストールしてApplication Insights を有効化します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| オペレーティング システム (ゲスト) | オペレーティング システムのコンピューティング リソースに関するデータ。                                                                                             | Log Analytics エージェントをインストールして Azure Monitor にクライアント データ ソースを収集すると共に、Dependency Agent をインストールして VM insights をサポートする依存関係を収集します。</BR></BR>Azure 仮想マシンについては、Azure Diagnostics 拡張機能をインストールして、ログとメトリックを Azure Monitor に収集します。</BR></BR>**[Azure Monitor エージェント (AMA)](https://docs.microsoft.com/ja-jp/azure/azure-monitor/agents/azure-monitor-agent-overview?tabs=PowerShellWindows)** は下記のレガシエージェントに代わるもの。</BR></BR>**Log Analytics エージェント**: </BR>データを Log Analytics ワークスペースに送信し、VM insights ソリューションと監視ソリューションをサポートします。</BR></BR>**Diagnostics 拡張機能**:</BR>Azure Monitor メトリック (Windows のみ)、Azure Event Hubs、Azure Storage にデータを送信します。</BR></BR>**Telegraf エージェント**: </BR>Azure Monitor メトリックにデータを送信します (Linux のみ)。 |
+| Azure リソース                     | 各 Azure リソースの運用とパフォーマンスに関するデータ。</BR>**リソースログのこと**                                                                                 | 自動的に収集されたメトリックをメトリックス エクスプローラーで確認します。Azure Monitor でログを収集するように診断設定を構成します。</BR>各種の監視ソリューションと Insights を利用すれば、特定の種類のリソースをさらに詳しく監視することができます                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Azure サブスクリプション           | Azure サブスクリプションにおける横断的なリソースサービス (Resource Manager、Service Health など) の正常性と管理に関連するデータ。</BR>**アクティビティログのこと** | ポータルで確認するか、ログ プロファイルを使用して Azure Monitor への収集を構成します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Azure テナント                     | Azure Active Directory など、テナント レベルの Azure サービスの操作に関するデータ。</BR>**AADログのこと**                                                          | AAD データをポータルで確認するか、テナントの診断設定を使用して Azure Monitor への収集を構成します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| カスタム ソース                    | 外部サービスからのデータや、他のコンポーネントまたはデバイスからのデータ。                                                                                         | Data Collector API を使用して任意の REST クライアントからログまたはメトリック データを Azure Monitor に収集します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+
+> リソースログ、アクティビティログ、Azure Active Directory（AAD）ログを**Azureプラットフォームログ**と呼びます。
+
+[Azure Monitor の Log Analytics エージェントのデータ ソース](https://docs.microsoft.com/ja-jp/azure/azure-monitor/agents/agent-data-sources)
+***
+
+### 1.4.2. [Azure Security Center](https://docs.microsoft.com/ja-jp/learn/modules/azure-security-center/?wt.mc_id=esi_m2l_content_wwl)
+
+[MITRE ATT&CK](https://www.intellilink.co.jp/article/column/attack-mitre-sec01.html)
+
+[Azure Security Center (無料) と有効化された Azure Defender](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-pricing)
+
+[Azure security benchmark introduction](https://docs.microsoft.com/ja-jp/security/benchmark/azure/introduction)
+
+[セキュリティの推奨事項 - リファレンス ガイド](https://docs.microsoft.com/ja-jp/azure/security-center/recommendations-reference)
+
+[Azure Security Center 内のセキュリティ スコア](https://docs.microsoft.com/ja-jp/azure/security-center/secure-score-security-controls)
+
+[Azure およびハイブリッドのマシンに対する Azure Defender の統合された脆弱性評価](https://docs.microsoft.com/ja-jp/azure/security-center/deploy-vulnerability-assessment-vm)
+
+[適応型アプリケーション制御を使用して、マシンの攻撃対象領域を減らす](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-adaptive-application)
+
+[Security Center の適応型アプリケーション制御とは](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-adaptive-application#what-are-security-centers-adaptive-application-controls)
+
+[アダプティブ ネットワークのセキュリティ強化により、ネットワークのセキュリティ体制を向上させる](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-adaptive-network-hardening)
+
+[SQL 脆弱性評価](https://docs.microsoft.com/ja-jp/azure/azure-sql/database/sql-vulnerability-assessment)
+
+[Azure Security Center のファイルの整合性の監視](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-file-integrity-monitoring)
+
+[クラウドトリガーに対する Microsoft Defender への応答を自動化する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/workflow-automation)
+
+[Microsoft Power Automate と Azure Logic Apps の比較](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs?msclkid=edcdfb9fb7d211ecaa09f53cbbd86280#compare-microsoft-power-automate-and-azure-logic-apps)
+***
+### 1.4.3. [Microsoft Sentinel](https://docs.microsoft.com/ja-jp/learn/modules/azure-sentinel/?wt.mc_id=esi_m2l_content_wwl)
+
+[Microsoft Sentinel のドキュメント](https://docs.microsoft.com/ja-jp/azure/sentinel/)
+
+[Microsoft Sentinel データ コネクタ](https://docs.microsoft.com/ja-jp/azure/sentinel/connect-data-sources)
+
+[Find your Microsoft Sentinel data connector](https://docs.microsoft.com/en-us/azure/sentinel/data-connectors-reference)
+
+***
 
 ## ラボ　補足
 
