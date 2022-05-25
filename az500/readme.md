@@ -26,6 +26,11 @@
   - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス)
   - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス-1)
 - [1.2. モジュール02](#12-モジュール02)
+- [1.2. モジュール02](#12-モジュール02-1)
+  - [1.2.1. 境界セキュリティ](#121-境界セキュリティ)
+  - [1.2.2. ネットワークセキュリティ](#122-ネットワークセキュリティ)
+  - [1.2.3. ホストセキュリティ](#123-ホストセキュリティ)
+  - [1.2.4. コンテナーセキュリティ](#124-コンテナーセキュリティ)
 - [1.3. モジュール03](#13-モジュール03)
 - [1.4. モジュール04](#14-モジュール04)
 - [ラボ　補足](#ラボ補足)
@@ -127,6 +132,8 @@ Get-AzureADUser -SearchString user01 | fl *
 ### 1.1.2. [ハイブリッド ID](https://docs.microsoft.com/ja-jp/learn/modules/hybrid-identity/?wt.mc_id=esi_m2l_content_wwl)
 
 **Azure AD Connect**
+- 
+
 [Azure AD Connect:アカウントとアクセス許可](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/reference-connect-accounts-permissions)
 
 Azure AD Connect では、オンプレミス (Windows Server Active Directory) から Azure Active Directory に情報を同期させるために 3 つのアカウントが使用されます。 それらのアカウントを次に示します。
@@ -383,56 +390,190 @@ Get-AzRoleDefinition 'user access administrator'
 
 ## 1.2. モジュール02
 
-**境界セキュリティ**
-- [Azure DDoS Protection Standard の概要](https://docs.microsoft.com/ja-jp/azure/ddos-protection/ddos-protection-overview)
+## 1.2. モジュール02
+
+**HubSpok 環境の作成**
+```powershell
+New-AzResourceGroup -Name hub-spoke -Location eastus
+New-AzResourceGroupDeployment -ResourceGroupName hub-spoke -TemplateUri https://raw.githubusercontent.com/mspnp/samples/master/solutions/azure-hub-spoke/azuredeploy.json
+```
+
+**HubSpok 環境の削除**
+
+```powershell
+Remove-AzResourceGroup -Name hub-spoke
+```
+
+![image](https://github.com/naonao71/note/blob/main/AZ-500/media/hub-spoke.jpg)
+
+***
+### 1.2.1. [境界セキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/perimeter-security/?wt.mc_id=esi_m2l_content_wwl)
+
+[Local Administrator Password Solution (LAPS) 導入ガイド (日本語版)](https://msrc-blog.microsoft.com/2020/08/26/20200827_laps/)
+
+[Azure DDoS Protection Standard の概要](https://docs.microsoft.com/ja-jp/azure/ddos-protection/ddos-protection-overview)
+
+DDoS Protection Standard では、次の種類の攻撃を軽減できます。
+
+- **ボリューム攻撃**
+  - 攻撃の目的は、一見、正当な大量のトラフィックでネットワーク層を溢れさせることです。これには、UDP フラッド、増幅フラッド、およびその他の偽装されたパケットのフラッドが含まれます。DDoS Protection Standard は、Azure のグローバル ネットワーク スケールを自動的に使用し、この潜在的に数ギガバイトに及ぶ攻撃を吸収して除去し、これらの攻撃を軽減します。
+- **プロトコル攻撃**
+  - これらの攻撃は、レイヤー 3 およびレイヤー 4 のプロトコル スタックの弱点を悪用して、ターゲットにアクセスできないようにします。これには、SYN フラッド攻撃、リフレクション攻撃、およびその他のプロトコル攻撃が含まれます。DDoS Protection Standard は、クライアント側と対話して悪意のあるトラフィックと正当なトラフィックを区別し、悪意のあるトラフィックをブロックしてこれらの攻撃を軽減します。
+- **リソース (アプリケーション) レイヤの攻撃**
+  - これらの攻撃は、ホスト間のデータ送信を妨害する Web アプリケーション パケットをターゲットとしています。これらの攻撃には、HTTP プロトコル違反、SQL インジェクション、クロスサイト スクリプティング、およびその他のレイヤー 7 の攻撃が含まれます。これらの攻撃に対する防御策として、Azure Application Gateway Web アプリケーション ファイアウォールなどの Web アプリケーション ファイアウォールと DDoS Protection Standard を使用します。Azure Marketplace には、サードパーティ製の Web アプリケーション ファイアウォール製品もあります。
+
+**Azure Firewall**
+
+主な機能：
+
+- **組み込みの高可用性**
+  - 高可用性が組み込まれているため、追加のロード バランサーは必要なく、構成すべきものもありません。
+- **無制限のクラウド スケーラビリティ**
+  - Azure Firewall では、必要に応じてスケールアップしてネットワーク トラフィック フローの変化に対応できるので、ピーク時のトラフィックを処理するために予算を立てる必要がありません。
+- **アプリケーション FQDN フィルタリング ルール**
+  - ワイルド カードも含まれる FQDN の指定された一覧に、送信 HTTP/S トラフィックを制限できます。この機能に SSL 終了は必要ありません。
+- **ネットワーク トラフィック フィルタリング ルール**
+  - 送信元と宛先の IP アドレス、ポート、プロトコルを基準として、“許可” または "拒否" のネットワーク フィルタリング規則を一元的に作成できます。Azure Firewall は完全にステートフルであるため、各種の接続の正当なパケットを識別できます。規則は、複数のサブスクリプションと仮想ネットワークにまたがって適用および記録されます。
+- **FQDN タグ**
+  - 完全修飾ドメイン名(FQDN) のタグにより、ファイアウォール経由の既知の Azure サービスのネットワーク トラフィックを簡単に許可することができます。たとえば、ファイアウォール経由の Windows Update のネットワーク トラフィックを許可したいとします。アプリケーションの規則を作成して、Windows Update のタグを組み込みます。これで、Windows Update からのネットワーク トラフィックをファイアウォール経由でフローできるようになります。
+- **発信ソース ネットワーク アドレス変換（OSNAT）のサポート**
+  - 仮想ネットワーク トラフィックの送信 IP アドレスはすべて Azure Firewall パブリック IP に変換されます。仮想ネットワークからインターネット上のリモートの送信先に向かうトラフィックを特定して許可できます。
+- **インバウンド宛先ネットワーク アドレス変換（DNAT）サポート**
+  - ファイアウォールのパブリック IP アドレスへの着信ネットワーク トラフィックは、変換され、仮想ネットワークのプライベート IP アドレスでフィルター処理されます。
+- **Azure Monitor のログ**
+  - すべてのイベントは Azure Monitor と統合されます。そのため、ログをストレージ アカウントにアーカイブしたり、イベントを Event Hub にストリーム配信したり、それらを Azure Monitor ログに送信したりできます。
+
+
 - [Azure Firewall に関する FAQ](https://docs.microsoft.com/ja-jp/azure/firewall/firewall-faq)
-- [強制トンネリングについて](https://docs.microsoft.com/ja-jp/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm)
-- [チュートリアル: Azure portal を使用して Azure Firewall とポリシーをデプロイして構成する](https://docs.microsoft.com/ja-jp/azure/firewall/tutorial-firewall-deploy-portal-policy)
-- [Azure Firewall Manager とは](https://docs.microsoft.com/ja-jp/azure/firewall-manager/overview)
 
-**NetworkSecurity**
+***
 
-- [ネットワーク セキュリティ グループ](https://docs.microsoft.com/ja-jp/azure/virtual-network/network-security-groups-overview)
-- [アプリケーション セキュリティ グループ](https://docs.microsoft.com/ja-jp/azure/virtual-network/application-security-groups)
-- [仮想ネットワーク サービス エンドポイント](https://docs.microsoft.com/ja-jp/azure/virtual-network/virtual-network-service-endpoints-overview)
-- [Azure Private Link とは](https://docs.microsoft.com/ja-jp/azure/private-link/private-link-overview?toc=/azure/virtual-network/toc.json)
-- [サービス エンドポイント](https://docs.microsoft.com/ja-jp/azure/virtual-network/vnet-integration-for-azure-services#compare-private-endpoints-and-service-endpoints)
-- [Azure Application Gateway とは](https://docs.microsoft.com/ja-jp/azure/application-gateway/overview)
-- [Azure Web アプリケーション ファイアウォールとは](https://docs.microsoft.com/ja-jp/azure/web-application-firewall/overview)
-- [Azure Front Door とは](https://docs.microsoft.com/ja-jp/azure/frontdoor/front-door-overview)
-- [負荷分散のオプション](https://docs.microsoft.com/ja-jp/azure/architecture/guide/technology-choices/load-balancing-overview?toc=%2fazure%2ffrontdoor%2fstandard-premium%2ftoc.json)
-- [Azure での負荷分散のデシジョン ツリー](https://docs.microsoft.com/ja-jp/azure/architecture/guide/technology-choices/load-balancing-overview?toc=%2fazure%2ffrontdoor%2fstandard-premium%2ftoc.json#decision-tree-for-load-balancing-in-azure)
-- [Azure ExpressRoute とは](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-introduction)
-- [ExpressRoute 接続モデル](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-connectivity-models)
-- [ExpressRoute Direct について](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about)
-- [ExpressRoute の暗号化](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-about-encryption)
+### 1.2.2. [ネットワークセキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/network-security/?wt.mc_id=esi_m2l_content_wwl)
+
+[仮想ネットワーク サービス エンドポイント](https://docs.microsoft.com/ja-jp/azure/virtual-network/virtual-network-service-endpoints-overview)
+
+[Azure Storage の仮想ネットワーク サービス エンドポイント ポリシー](https://docs.microsoft.com/ja-jp/azure/virtual-network/virtual-network-service-endpoint-policies-overview)
+
+[プライベート リンク リソース](https://docs.microsoft.com/ja-jp/azure/private-link/private-endpoint-overview#private-link-resource)
+
+[Azure Private Link のよく寄せられる質問 (FAQ)](https://docs.microsoft.com/ja-jp/azure/private-link/private-link-faq#what-is-the-relationship-between-private-link-service-and-private-endpoint)
+
+[Load Balancer と Application Gateway の通信の違い](https://docs.microsoft.com/ja-jp/archive/blogs/jpaztech/lb_appgw_traffic_different)
+
+[Azure Application Gateway のセッション アフィニティに関する問題をトラブルシューティングする](https://docs.microsoft.com/ja-jp/azure/application-gateway/how-to-troubleshoot-application-gateway-session-affinity-issues)
+
+[Azure Front Door とは](https://docs.microsoft.com/ja-jp/azure/frontdoor/front-door-overview)
+
+[Azure での負荷分散のデシジョン ツリー](https://docs.microsoft.com/ja-jp/azure/architecture/guide/technology-choices/load-balancing-overview?toc=%2fazure%2ffrontdoor%2fstandard-premium%2ftoc.json#decision-tree-for-load-balancing-in-azure)
+
+[ExpressRoute Direct について](https://docs.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about#workflow)
+
+***
+
+### 1.2.3. [ホストセキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/host-security/?wt.mc_id=esi_m2l_content_wwl)
+
+[Windows Autopilot の概要](https://docs.microsoft.com/ja-jp/mem/autopilot/windows-autopilot)
+
+[特権アクセス: 戦略](https://docs.microsoft.com/ja-jp/security/compass/privileged-access-strategy)
+
+[特権アクセスの一部としてデバイスをセキュリティで保護する](https://docs.microsoft.com/ja-jp/security/compass/privileged-access-devices)
+
+[PAW（Privileged Access Workstation）の実装](https://docs.microsoft.com/ja-jp/security/compass/privileged-access-deployment)
+
+[Azure VM での VM ゲストの自動パッチ適用](https://docs.microsoft.com/ja-jp/azure/virtual-machines/automatic-vm-guest-patching)
+
+[Linux VM に対する Azure Disk Encryption](https://docs.microsoft.com/ja-jp/azure/virtual-machines/linux/disk-encryption-overview)
+
+[Windows VM 用の Azure Disk Encryption](https://docs.microsoft.com/ja-jp/azure/virtual-machines/windows/disk-encryption-overview)
+
+[Windows VM で Azure Disk Encryption のキー コンテナーを作成して構成する](https://docs.microsoft.com/ja-jp/azure/virtual-machines/windows/disk-encryption-key-vault)
+
+[Microsoft Defender for Endpoint](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-wdatp?tabs=windows)
+
+[エンドポイントセキュリティ：Microsoft Defender for Endpoint](https://www.microsoft.com/ja-jp/security/business/threat-protection/endpoint-defender)
+
+[Introducing Microsoft Defender for Endpoint Plan 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/introducing-microsoft-defender-for-endpoint-plan-1/ba-p/2636641)
+
+[Microsoft Defender for Endpoint Plan 1 の概要](https://docs.microsoft.com/ja-jp/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1?view=o365-worldwide)
+
+**OS の種類ごとのアンチマルウェアと EDR のオプションに関して**
+
+|                 | Linux                                   | Windows Server 2022/2019                | Windows Server 2016                     | Windows Server 2012 R2                  | Windows Server 2012    | Windows Server 2008 R2                  |
+| :-------------- | :-------------------------------------- | :-------------------------------------- | :-------------------------------------- | :-------------------------------------- | :--------------------- | :-------------------------------------- |
+| AVモジュール    | MDEモジュール                           | Microsoft Defender AV                   | Microsoft Defender AV                   | Microsoft Antimalware                   | Microsoft Antimalware  | Microsoft Antimalware                   |
+| AV提供方法      | Microsoft Defender for Cloud で利用可能 | OS 組み込みのため無料で利用可能         | OS 組み込みのため無料で利用可能         | Azure 上の無料サービス                  | Azure 上の無料サービス | Azure 上の無料サービス                  |
+| EDRサーバー     | MDE                                     | MDE                                     | MDE                                     | MDE                                     | 非対応                 | MDE                                     |
+| EDRエージェント | MDEモジュール                           | OS組み込みのMDEセンサー                 | **MMA** *1                              | **MMA** *1                              | 非対応                 | MMA                                     |
+| EDR連携         | Microsoft Defender for Cloud で利用可能 | Microsoft Defender for Cloud で利用可能 | Microsoft Defender for Cloud で利用可能 | Microsoft Defender for Cloud で利用可能 | 非対応                 | Microsoft Defender for Cloud で利用可能 |
+
+> *1  新しいMDEモジュールが提供予定
+
+製品としては以下が登場する。
+- Microsoft Defender for Cloud (Defender for Cloud)
+- Microsoft Monitoring Agent (MMA) "旧 Log Analytics エージェント"
+- Microsoft Defender for Endpoint (MDE)
+- Microsoft Defender AV
+- Microsoft Antimalware
+
+**マルウェアに関して**
+
+**Linux**</BR>
+Linux のアンチマルウェアは、MDE の中で EDR と合わせて提供されます。Defender for Cloud から MDE を自動オンボードする場合、AV 部分は最初無効化されています。そのため、[構成プロファイル](https://docs.microsoft.com/ja-jp/microsoft-365/security/defender-endpoint/linux-preferences?view=o365-worldwide#recommended-configuration-profile)を変更するなどして有効化をしておく必要があります。
+
+**Windows Server 2016 / 2019 / 2022**</BR>
+Windows Server 2016 以降は、OS 組み込みの Microsoft Defender AV を利用することができます。アラートの管理には、MDE や Defender for Cloud を利用します。
+
+そのため基本的には Azure の拡張機能である Microsoft Antimalware を利用する必要はありませんが、スキャンのタイミングの設定などを Azure Portal から行いたい場合などは、Microsoft Antimalware 拡張機能を有効化することもできます。
+
+**Windows Server 2008 R2 / 2012 / 2012 R2**</BR>
+Windows Server 2012 R2 以前は、Microsoft Defender AV は利用できません。しかし、Azure 上の仮想マシンであれば、Microsoft Defender AV 相当のアンチマルウェア機能を、仮想マシン拡張機能として利用することができます。これが、Microsoft Antimalware です。無料ですぐに利用を開始でき、拡張機能として構成をしていくことも可能です。また、Microsoft Defender AV と同じく、アラートの管理には、MDE や Defender for Cloud を利用します。
+
+**EDRに関して**
+
+**Linux**</BR>
+Linux は AV と同じ MDE のモジュールの中で EDR 機能が含まれています。
+
+**Windows Server 2019 / 2022**</BR>
+OS組み込みのセンサーが使われます。Defender for Cloud からの自動オンボードの場合、このセンサーの有効化が自動的に行われます。
+
+**Windows Server 2008 R2 / 2012 R2 / 2016**</BR>
+Microsoft Monitoring Agent (MMA)がセンサーの役割を果たします。そのため機能が限定されており、自動調査と対処などが利用できません。
+
+> 今後 Windows Server 2012 R2 と 2016 向けの[新しいモジュール](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) が提供される予定です。これにより、古いバージョンの Windows Server についてもより高度な保護を利用できるようになっていきます。この新しいモジュールのインストールなども今後 Defender for Cloud 側にも組み込まれていく予定です。
+
+**Windows Server 2012**</BR>
+MDE非対応
+
+***
   
-**HOSTSecurity**
-- [特権アクセス ストーリーの一部としてのデバイスのセキュリティ保護](https://docs.microsoft.com/ja-jp/security/compass/privileged-access-devices)
-- [Azure Bastion とは](https://docs.microsoft.com/ja-jp/azure/bastion/bastion-overview)
-- [Update Management の概要](https://docs.microsoft.com/ja-jp/azure/automation/update-management/overview)
-- [Windows VM 用の Azure Disk Encryption](https://docs.microsoft.com/ja-jp/azure/virtual-machines/windows/disk-encryption-overview)
-- [Linux VM に対する Azure Disk Encryption](https://docs.microsoft.com/ja-jp/azure/virtual-machines/linux/disk-encryption-overview)
-- [Azure セキュリティ ベンチマークの概要](https://docs.microsoft.com/ja-jp/security/benchmark/azure/introduction)
-- [資産インベントリを使用してリソースのセキュリティ態勢を管理する](https://docs.microsoft.com/ja-jp/azure/defender-for-cloud/asset-inventory)
-  
-**コンテナセキュリティ**
-- [コンテナーと仮想マシン](https://docs.microsoft.com/ja-jp/virtualization/windowscontainers/about/containers-vs-vm)
-- [Azure Container Instances のセキュリティに関する考慮事項](https://docs.microsoft.com/ja-jp/azure/container-instances/container-instances-image-security)
-- [Azure Container Instances とは](https://docs.microsoft.com/ja-jp/azure/container-instances/container-instances-overview)
-- [Azure Kubernetes Serviceについて](https://docs.microsoft.com/ja-jp/azure/aks/intro-kubernetes)
-- [チュートリアル: Azure Kubernetes Service (AKS) でのアプリケーションに対するネットワークの概念](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network)
-- [サービス](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network#services)
-- [イングレス コントローラー](https://docs.microsoft.com/ja-jp/azure/aks/concepts-network#ingress-controllers)
-- [Azure Kubernetes Service (AKS) でのアプリケーションのストレージ オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-storage)
-- [Azure Kubernetes Service (AKS) でのアクセスと ID オプション](https://docs.microsoft.com/ja-jp/azure/aks/concepts-identity)
-- [Japan Azure IaaS Core Support Blog](https://jpaztech.github.io/blog/tags/Containers/)
-- [https://azure.github.io/application-gateway-kubernetes-ingress/ 詳しい資料](https://azure.github.io/application-gateway-kubernetes-ingress/)
+### 1.2.4. [コンテナーセキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/enable-containers-security/?wt.mc_id=esi_m2l_content_wwl)
+
+**コンテナーを使用するにあたってのセキュリティ考慮事項**
+- パブリックに公開されているコンテナーイメージはセキュリティを保証しない。よって、**プライベートレジストリを使用することでセキュリティを高める**
+- Dockerイメージをアップロード（プッシュ）して、リポジトリに保管するが、その際に**継続的に監視およびスキャンをする**
+  - プライベートレジストリである**ACR（Azure Container Registry）を使用すれば上記要件を満たす**
+- **最小特権の原則をコンテナーにも適用する**。これによってリスク軽減になる。
+- **コンテナーランタイムから未使用および不要なプロセスや特権を削除する**。これによって、攻撃面（アタックサーフェス）を最小限に抑える
+- **ネットワークセグメンテーションを行う**ことで、侵害時の横移動を防止する
+- Kubernetes クラスター、コンテナー レジストリ、コンテナー イメージなど、コンテナー エコシステムへの**管理アクセスの正確な監査証跡を維持します**。これらのログは、監査の目的で必要になる場合があり、セキュリティインシデントの後に証拠として役立ちます
+
+[脅威分析モデル～STRIDE～](https://hanakutoman.com/threat-modeling-stride/)
+
+[Azure Defender for container registries の概要](https://docs.microsoft.com/ja-jp/azure/security-center/defender-for-container-registries-introduction)
+
+[Azure Security Center (無料) と有効化された Azure Defender](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-pricing)
+
+[Azure Container Registry におけるコンテンツの信頼](https://docs.microsoft.com/ja-jp/azure/container-registry/container-registry-content-trust)
+
+[Azure Container Registry のロールとアクセス許可](https://docs.microsoft.com/ja-jp/azure/container-registry/container-registry-roles?tabs=azure-cli)
+
+[Azure Container Instances のセキュリティに関する考慮事項](https://docs.microsoft.com/ja-jp/azure/container-instances/container-instances-image-security)
 
 **K8S参考資料**
 - [Serviceを使ったアプリケーションの公開](https://kubernetes.io/ja/docs/tutorials/kubernetes-basics/expose/expose-intro/)
 - [Service(上の資料より詳しい説明資料)](https://kubernetes.io/ja/docs/concepts/services-networking/service/)
-- 
+
+***
 
 ## 1.3. モジュール03
 **KeyVault**
