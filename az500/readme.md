@@ -854,6 +854,12 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 ***
 
 ## ラボ　補足
+**LAB1演習3**
+OBJECTIDのパラメータ変更
+
+旧：　OBJECTID=$(echo $USER | jq '.[].objectId' | tr -d '"')
+
+新：　OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')
 
 **ラボ環境IME不整合**
 - [WindowsPCの場合、キー入力で不整合がある場合の対応](pdf/ラボ環境IME不整合.pdf)
