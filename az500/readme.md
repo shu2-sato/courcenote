@@ -28,9 +28,7 @@
   - [1.1.3. Azure AD Identity Protection](#113-azure-ad-identity-protection)
   - [1.1.4. Azure AD Pricileged Identity Management](#114-azure-ad-pricileged-identity-management)
   - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス)
-  - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス-1)
 - [1.2. モジュール02](#12-モジュール02)
-- [1.2. モジュール02](#12-モジュール02-1)
   - [1.2.1. 境界セキュリティ](#121-境界セキュリティ)
   - [1.2.2. ネットワークセキュリティ](#122-ネットワークセキュリティ)
   - [1.2.3. ホストセキュリティ](#123-ホストセキュリティ)
@@ -311,46 +309,6 @@ MFAを要求する設定は以下の通り
 > - 条件付きアクセスで多要素認証を要求する場合は、追加のクラウドベースのMFA設定で無効状態でもMFA認証を要求される（MFA設定画面に遷移する）。
 
 ***
-### 1.1.5. [エンタープライズ ガバナンス](https://docs.microsoft.com/ja-jp/learn/modules/enterprise-governance/?wt.mc_id=esi_m2l_content_wwl)
-
-**Azure ポリシー**
-Azureポリシーを使用して、あるべき姿を強制する（コンプライアンス）ことができる。そのポリシーをまとめたものがイニシアティブとなる。
-
-Azureポリシーの機能には以下の3つの大きな柱があります
-- 強制とコンプライアンス
-  - 設定したポリシーに対してすべてのリソースに対するコンプライアンス評価としてコンプライアンス状態を確認できる
-- ポリシーを大規模に運用
-  - 管理グループにポリシーを適用できることで、1つのポリシーを数百のサブスクリプションとそのすべてのリソースに対して適用できる
-- 修復
-  - コンプライアンスが非準拠のリソースを自動的に修復する修復ポリシーを使用できる
-  - 修復時にマネージドIDが必要な効果は**DeployIfNotExists**と**Modify**
-
-[Azure Policy の効果について](https://docs.microsoft.com/ja-jp/azure/governance/policy/concepts/effects)
-
-[Azure Policy の定義の構造](https://docs.microsoft.com/ja-jp/azure/governance/policy/concepts/definition-structure)
-
-[チュートリアル:コンプライアンスを強制するポリシーの作成と管理](https://docs.microsoft.com/ja-jp/azure/governance/policy/tutorials/create-and-manage)
-
-**Azure リソースの組み込みロール**
-
-組み込みロール一覧
-```powershell
-Get-AzRoleDefinition | ft name
-```
-AD Role の確認例
-```powershell
-Get-AzRoleDefinition 'Owner'
-Get-AzRoleDefinition 'contributor'
-Get-AzRoleDefinition 'user access administrator'
-```
-
-[Azure カスタム ロール](https://docs.microsoft.com/ja-jp/azure/role-based-access-control/custom-roles)
-
-[Azure Blueprint とは](https://docs.microsoft.com/ja-jp/azure/governance/blueprints/overview)
-
-[Azure サブスクリプションの課金所有権の譲渡の概要](https://docs.microsoft.com/ja-jp/azure/cost-management-billing/understand/subscription-transfer)
-
-***
 
 ### 1.1.5. [エンタープライズ ガバナンス](https://docs.microsoft.com/ja-jp/learn/modules/enterprise-governance/?wt.mc_id=esi_m2l_content_wwl)
 
@@ -399,7 +357,6 @@ Get-AzRoleDefinition 'user access administrator'
 - [Microsoft ID プラットフォームのドキュメント](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/)
 ***
 
-## 1.2. モジュール02
 
 ## 1.2. モジュール02
 
