@@ -812,18 +812,27 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 
 ## ラボ　補足
 **LAB1演習3**
-OBJECTIDのパラメータ変更
+OBJECTIDで参照しているobjectIdプロパティが id に置き換わっています。　以下のように　id　　を使用ください。
 
 旧：　OBJECTID=$(echo $USER | jq '.[].objectId' | tr -d '"')
 
 新：　OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')
+
+説明：
+az ad user list　コマンドが、Microsoft Graph APIに変更されており
+Azure Active Directory (Azure AD) Graph の廃止に伴い、Azure CLI 2.37.0 で、基になる Active Directory Graph API は Microsoft Graph API に置き換えられます。
+[重大な変更](https://docs.microsoft.com/ja-jp/cli/azure/microsoft-graph-migration)
+最も顕著な変更は、Graph オブジェクトの出力 JSON の objectIdプロパティが id に置き換わったことです。
 
 **ラボ環境IME不整合**
 - [WindowsPCの場合、キー入力で不整合がある場合の対応](pdf/ラボ環境IME不整合.pdf)
 
 **LAB4テナント削除**
 - [テナントの組織を削除できない場合](https://docs.microsoft.com/ja-jp/azure/active-directory/enterprise-users/directory-delete-howto#if-you-cant-delete-the-organization)
- 組織の削除を許可するには、サブスクリプションがプロビジョニング解除済み状態である必要があります。 有効期限切れ（３０日間）またはキャンセル済みのサブスクリプションは、無効 状態（30日間）に移行します。そして、最終段階がプロビジョニング解除済み状態（無効後30日間）です。
+  
+偶発的なデータ損失を回避するため、サブスクリプションが完全に削除されるまでは組織を削除できません。
+
+組織の削除を許可するには、サブスクリプションがプロビジョニング解除済み状態である必要があります。 アクティブ (試用版の 30 日間)が有効期限切れ（３０日間）となり、またはキャンセル済みのサブスクリプションは、無効 状態（30日間）に移行します。そして、最終段階がプロビジョニング解除済み状態（無効後30日間）です。
 
 
  Premium P2 ライセンスの試用版サブスクリプションの場合 M365 管理者 » 製品およびビジネス ストア ポータルから削除できます。
