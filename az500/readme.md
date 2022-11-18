@@ -2,7 +2,7 @@
 
 **リンク一覧およびメモ**
 
-- [AZ-500 ラボコンテンツ](https://microsoftlearning.github.io/AZ-500JA-AzureSecurityTechnologies/)
+- [AZ-500 ラボコンテンツ](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies.ja-jp)
     - [ラボファイルをローカルにダウンロードする](https://github.com/MicrosoftLearning/AZ-500JA-AzureSecurityTechnologies/archive/master.zip)
 
 - [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/neqjf5m83e37x4?wt.mc_id=esi_m2l_content_wwl)
@@ -17,7 +17,7 @@
     
 - [support使用法](pdf/support.pdf)
 
-[AZ-500補足資料](https://github.com/naonao71/note/blob/main/AZ-500/AZ-500%E8%A3%9C%E8%B6%B3%E8%B3%87%E6%96%99v1.2.pdf)
+[AZ-500補足資料](pdf/AZ-500補足資料v1.3.pdf)
 
 - ローカルにダウンロードする
   
