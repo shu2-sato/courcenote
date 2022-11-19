@@ -183,11 +183,6 @@ Azure AD Connect を実行するためのこれら 3 つのアカウントに加
   
 [チュートリアル:オンプレミス環境への Azure Active Directory のセルフサービス パスワード リセットのライトバックを有効にする](https://docs.microsoft.com/ja-jp/azure/active-directory/authentication/tutorial-enable-sspr-writeback)
 
-[NIST SP800-207 「ゼロトラスト・アーキテクチャ」の解説と日本語訳](https://www.pwc.com/jp/ja/knowledge/column/awareness-cyber-security/zero-trust-architecture-jp.html)
-
-[ゼロトラストという戦術の使い方(IPA)](https://www.ipa.go.jp/icscoe/program/core_human_resource/final_project/zero-trust.html?msclkid=ca679eb7b9de11ec95013ea55f031876)
-
-[Microsoft 365 を用いたゼロ トラスト ネットワークの実現](https://docs.microsoft.com/ja-jp/archive/blogs/jpazureid/building-zero-trust-networks-with-microsoft-365)
 
 ***
 ### 1.1.3. [Azure AD Identity Protection](https://docs.microsoft.com/ja-jp/learn/modules/azure-ad-identity-protection/?wt.mc_id=esi_m2l_content_wwl)
@@ -274,6 +269,12 @@ Azure AD Connect を実行するためのこれら 3 つのアカウントに加
 
 [条件付きアクセス:デバイス プラットフォーム](https://docs.microsoft.com/ja-jp/azure/active-directory/conditional-access/concept-conditional-access-conditions#device-platforms)
   
+[NIST SP800-207 「ゼロトラスト・アーキテクチャ」の解説と日本語訳](https://www.pwc.com/jp/ja/knowledge/column/awareness-cyber-security/zero-trust-architecture-jp.html)
+
+[ゼロトラストという戦術の使い方(IPA)](https://www.ipa.go.jp/icscoe/program/core_human_resource/final_project/zero-trust.html?msclkid=ca679eb7b9de11ec95013ea55f031876)
+
+[Microsoft 365 を用いたゼロ トラスト ネットワークの実現](https://docs.microsoft.com/ja-jp/archive/blogs/jpazureid/building-zero-trust-networks-with-microsoft-365)
+
 ***
 ### 1.1.4. [Azure AD Pricileged Identity Management](https://docs.microsoft.com/ja-jp/learn/modules/azure-ad-privileged-identity-management/?wt.mc_id=esi_m2l_content_wwl)
 
