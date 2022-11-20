@@ -372,12 +372,21 @@ Get-AzRoleDefinition 'user access administrator'
 
 
 ## 1.2. モジュール02
-
+- [Azure のハブスポーク ネットワーク トポロジ](https://learn.microsoft.com/ja-jp/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli)
+- [Hub and spoke deployment サンプル](https://learn.microsoft.com/ja-jp/samples/mspnp/samples/hub-and-spoke-deployment/)
 **HubSpok 環境の作成**
-```powershell
-New-AzResourceGroup -Name hub-spoke -Location eastus
-New-AzResourceGroupDeployment -ResourceGroupName hub-spoke -TemplateUri https://raw.githubusercontent.com/mspnp/samples/master/solutions/azure-hub-spoke/azuredeploy.json
+```cli
+az group create --name hub-spoke --location eastus
 ```
+
+```cli
+az deployment group create \
+    --resource-group hub-spoke \
+    --template-uri https://raw.githubusercontent.com/mspnp/samples/main/solutions/azure-hub-spoke/azuredeploy.json \
+    --parameters deployVirtualMachines=true adminUsername=azureadmin adminPassword=Password2023!
+```
+Spoke1にLinuxVM、Spoke2にWin VMを作成します。
+adminUsernameとadminPasswordは、実行するときに変更してください
 
 **HubSpok 環境の削除**
 
