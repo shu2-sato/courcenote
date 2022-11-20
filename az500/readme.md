@@ -427,6 +427,8 @@ DDoS Protection Standard では、次の種類の攻撃を軽減できます。
 
 - [Azure Firewall に関する FAQ](https://docs.microsoft.com/ja-jp/azure/firewall/firewall-faq)
 
+- [従来の Azure ネットワーク トポロジ](https://learn.microsoft.com/ja-jp/azure/cloud-adoption-framework/ready/azure-best-practices/traditional-azure-networking-topology?toc=%2Fazure%2Farchitecture%2Ftoc.json&bc=%2Fazure%2Farchitecture%2F_bread%2Ftoc.json)
+
 ***
 
 ### 1.2.2. [ネットワークセキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/network-security/?wt.mc_id=esi_m2l_content_wwl)
