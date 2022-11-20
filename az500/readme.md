@@ -390,8 +390,8 @@ adminUsernameとadminPasswordは、実行するときに変更してください
 
 **HubSpok 環境の削除**
 
-```powershell
-Remove-AzResourceGroup -Name hub-spoke
+```cli
+az group delete --name hub-spoke
 ```
 
 ![image](https://github.com/naonao71/note/blob/main/AZ-500/media/hub-spoke.jpg)
