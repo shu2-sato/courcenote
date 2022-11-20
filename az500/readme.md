@@ -391,7 +391,7 @@ adminUsernameとadminPasswordは、実行するときに変更してください
 **HubSpok 環境の削除**
 
 ```cli
-az group delete --name hub-spoke
+az group delete --name hub-spoke  --no-wait
 ```
 
 ![image](https://github.com/naonao71/note/blob/main/AZ-500/media/hub-spoke.jpg)
