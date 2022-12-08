@@ -37,7 +37,9 @@
 - [1.1. モジュール01](#11-モジュール01)
   - [1.1.1. Azure Active Directory](#111-azure-active-directory)
   - [1.1.2. ハイブリッド ID](#112-ハイブリッド-id)
+- [**Azure AD Connect**](#azure-ad-connect)
   - [1.1.3. Azure AD Identity Protection](#113-azure-ad-identity-protection)
+- [**条件付きアクセスポリシー(CA)**](#条件付きアクセスポリシーca)
   - [1.1.4. Azure AD Pricileged Identity Management](#114-azure-ad-pricileged-identity-management)
   - [1.1.5. エンタープライズ ガバナンス](#115-エンタープライズ-ガバナンス)
 - [1.2. モジュール02](#12-モジュール02)
@@ -435,6 +437,10 @@ DDoS Protection Standard では、次の種類の攻撃を軽減できます。
 
 
 - [Azure Firewall に関する FAQ](https://docs.microsoft.com/ja-jp/azure/firewall/firewall-faq)
+- [Firewall Policy を使用した規則の処理](https://learn.microsoft.com/ja-jp/azure/firewall/rule-processing#rule-processing-using-firewall-policy)
+  
+ 注意
+Application 規則は常に Network 規則より後で処理します。Network 規則は、Rule Collection Group および Rule Collection の優先度とポリシーの継承に関わりなく、常に DNAT 規則より後で処理します。
 
 - [従来の Azure ネットワーク トポロジ](https://learn.microsoft.com/ja-jp/azure/cloud-adoption-framework/ready/azure-best-practices/traditional-azure-networking-topology?toc=%2Fazure%2Farchitecture%2Ftoc.json&bc=%2Fazure%2Farchitecture%2F_bread%2Ftoc.json)
 
