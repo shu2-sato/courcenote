@@ -602,6 +602,10 @@ Azure keyコンテナー（Azure Key Vault）では
 [Azure Key Vault の認証](https://docs.microsoft.com/ja-jp/azure/key-vault/general/authentication)
 
 [HSM で保護されたキーを Key Vault にインポートする](https://docs.microsoft.com/ja-jp/azure/key-vault/keys/hsm-protected-keys)
+
+[チュートリアル:Key Vault に格納されている TLS/SSL 証明書を使用して、Azure 内の Windows 仮想マシン上の Web サーバーをセキュリティで保護します](https://learn.microsoft.com/ja-jp/azure/virtual-machines/windows/tutorial-secure-web-server)
+
+
 ***
 
 ### 1.3.2. [アプリケーションのセキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/application-security/?wt.mc_id=esi_m2l_content_wwl)
