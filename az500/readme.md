@@ -621,7 +621,8 @@ AzureADとの連携シナリオ
 MSAL(Microsoft Authentication Library：Microsoft 認証ライブラリ）を取り込むことでMicrosoft ID プラットフォームエンドポイントを使用できる（マイクロソフトアカウント、組織アカウント、ソーシャルまたはローカルアカウント）
 
 **MSAL は、Microsoft ID プラットフォームと併せて使用する際にお勧めの認証ライブラリ**
-業界標準のプロトコル OAuth 2.0 and OpenID Connect に基づいています.
+
+Microsoft ID プラットフォーム は、業界標準のプロトコル OAuth 2.0 and OpenID Connect に基づいて実装されています.
 
 [セキュリティ トークン](https://learn.microsoft.com/ja-jp/azure/active-directory/develop/security-tokens)
 
