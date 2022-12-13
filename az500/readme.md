@@ -621,6 +621,17 @@ AzureADとの連携シナリオ
 MSAL(Microsoft Authentication Library：Microsoft 認証ライブラリ）を取り込むことでMicrosoft ID プラットフォームエンドポイントを使用できる（マイクロソフトアカウント、組織アカウント、ソーシャルまたはローカルアカウント）
 
 **MSAL は、Microsoft ID プラットフォームと併せて使用する際にお勧めの認証ライブラリ**
+業界標準のプロトコル OAuth 2.0 and OpenID Connect に基づいています.
+
+[セキュリティ トークン](https://learn.microsoft.com/ja-jp/azure/active-directory/develop/security-tokens)
+
+**アクセス トークン**:アクセス トークンは、OAuth 2.0 フローの一部として承認サーバーによって発行されるセキュリティ トークンです。 これには、そのトークンの対象となるユーザーとリソースに関する情報が含まれています。 この情報を使用すると、Web API やその他の保護されたリソースにアクセスできます。 アクセス トークンは、クライアント アプリにアクセス権を付与するためにリソースによって検証されます。
+
+**リフレッシュトークン**: アクセス トークンは短時間しか有効でないため、承認サーバーでは、アクセス トークンが発行されると同時にリフレッシュトークンを発行する場合があります。 クライアント アプリケーションでは、必要に応じて、このリフレッシュトークンを新しいアクセス トークンに交換できます。
+
+**ID トークン**: ID トークンは、OpenID Connect フローの一部としてクライアント アプリケーションに送信されます。 これらは、アクセス トークンの代わりに、またはアクセス トークンと共に送信できます。 ID トークンは、ユーザーを認証するためにクライアントによって使用されます。
+
+[シナリオとサポートされている認証フロー](https://learn.microsoft.com/ja-jp/azure/active-directory/develop/authentication-flows-app-scenarios#scenarios-and-supported-authentication-flows)
 
 [Microsoft ID プラットフォームとは](https://docs.microsoft.com/ja-jp/azure/active-directory/develop/v2-overview)
 
