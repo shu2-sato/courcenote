@@ -673,6 +673,10 @@ Microsoft ID プラットフォーム は、業界標準のプロトコル OAuth
 
 [動画：Getting started with Microsoft Graph Postman workspace](https://www.youtube.com/watch?v=3RTHY3jScmA)
 
+[チュートリアル: Azure App Service で実行されている Web アプリにアプリの認証を追加する](https://learn.microsoft.com/ja-jp/azure/app-service/scenario-secure-app-authentication-app-service)
+
+[Microsoft Graph を使用して Python アプリをビルドする](https://learn.microsoft.com/ja-jp/graph/tutorials/python?WT.mc_id=Portal-Microsoft_AAD_RegisteredApps&tabs=aad)
+
 ***
 ### 1.3.3. [ストレージ セキュリティ](https://docs.microsoft.com/ja-jp/learn/modules/storage-security/?wt.mc_id=esi_m2l_content_wwl)
 
