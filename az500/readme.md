@@ -591,6 +591,8 @@ Azure keyコンテナー（Azure Key Vault）では
 > - BLOBストレージ
 > - Azure Files
 
+[Azure Key Vault に既存のストレージ アカウントのカスタマー マネージド キーを構成する](https://learn.microsoft.com/ja-jp/azure/storage/common/customer-managed-keys-configure-existing-account?tabs=azure-portal)
+
 [キー コンテナーでの Azure RBAC シークレット、キー、および証明書のアクセス許可の使用](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide?tabs=azure-cli#using-azure-rbac-secret-key-and-certificate-permissions-with-key-vault)
 
 アクセス許可モデルを変更するには、所有者ロールとユーザー アクセス管理者ロールの一部である "Microsoft.Authorization/roleAssignments/write" アクセス許可が必要です。"サービス管理者" や "共同管理者" などの従来のサブスクリプション管理者ロールはサポートされていません。
