@@ -871,6 +871,14 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 ***
 
 ## ラボ　補足
+**チュートリアル**
+：PythonをMACでlocalhostでテストする時
+ポート5000が、他のサービスで使用している場合（AirPlay Receiverとか）
+確認　netstat -an | grep 5000　　
+　（すでに5000番でLISTENしている）
+Flaskでは他のポート番号を指定する必要があります。
+flask run --host=0.0.0.0 -p 5010
+
 **LAB10**
 LAB10 タスク5手順14で、エラーが出る場合の対応
 
