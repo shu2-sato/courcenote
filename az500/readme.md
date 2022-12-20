@@ -607,6 +607,11 @@ Azure keyコンテナー（Azure Key Vault）では
 
 [チュートリアル:Key Vault に格納されている TLS/SSL 証明書を使用して、Azure 内の Windows 仮想マシン上の Web サーバーをセキュリティで保護します](https://learn.microsoft.com/ja-jp/azure/virtual-machines/windows/tutorial-secure-web-server)
 
+[チュートリアル:Azure Active Directory Domain Services のマネージド ドメインを作成して構成する](https://learn.microsoft.com/ja-jp/azure/active-directory-domain-services/tutorial-create-instance)
+
+ドメインを指定すると、管理者アカウントが聞かれます。
+ここで入力するアカウントが、AAD DC Administratorsに追加したユーザーアカウントになります。
+クラウド専用ユーザー アカウントの場合、ユーザーは Azure AD DS を使用する前に各自のパスワードを変更する必要があります。 このパスワード変更プロセスによって、Kerberos 認証と NTLM 認証に使用されるパスワード ハッシュが Azure AD に生成されて保存されます
 
 ***
 
@@ -880,6 +885,11 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 設定->AirPlayレシーバを停止するか、
 Flaskで他のポート番号を指定する必要があります。
 flask run --host=0.0.0.0 -p 80
+
+**チュートリアル**
+チュートリアル:Azure Active Directory Domain Services のマネージド ドメインを作成して構成する
+クラウド専用ユーザー アカウントの場合、ユーザーは Azure AD DS を使用する前に各自のパスワードを変更する必要があります。 このパスワード変更プロセスによって、Kerberos 認証と NTLM 認証に使用されるパスワード ハッシュが Azure AD に生成されて保存されます。 パスワードが変更されるまで、アカウントは Azure AD から Azure AD DS に同期されません。 テナント内のクラウド ユーザーのうち、Azure AD DS を使用する必要がある全ユーザーのパスワードを期限切れにして、次回のサインイン時にパスワードの変更を強制するか、または、各自のパスワードを手動で変更するようクラウド ユーザーに指示してください。 このチュートリアルでは、ユーザー パスワードを手動で変更しましょう。
+
 
 **LAB10**
 LAB10 タスク5手順14で、エラーが出る場合の対応
