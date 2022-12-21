@@ -10,7 +10,9 @@
 - [ラボ環境準備　PDF](pdf/ラボ環境準備.pdf)
     - InPrivte モードでブラウザを起動
     - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
-    - ラボ環境[LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)**今回新しく作ったMSアカウントでログインしてください。**
+    - ラボ環境[ESI版　LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
+    - ラボ環境[トレノケート版　LODS](https://trainocate.learnondemand.net/User/Login?ReturnUrl=%2F)
+    - **今回新しく作ったMSアカウントでログインしてください。**
     - トレーニングコードは、講師から案内があります。
     - AzurePass サブスクリプションはラボ環境からアクティベートします。[トレーニング用サブスクリプションの取得](https://www.microsoftazurepass.com/)
     - ラボ環境が英語の場合[ラボ環境キーボード変更](pdf/ラボ環境キーボード変更.pdf)
