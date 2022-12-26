@@ -841,6 +841,8 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 
 ### 1.4.2. [Azure Security Center](https://docs.microsoft.com/ja-jp/learn/modules/azure-security-center/?wt.mc_id=esi_m2l_content_wwl)
 
+[MITRE ATT&CK の方針](https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/alerts-reference#intentions)
+
 [MITRE ATT&CK](https://www.intellilink.co.jp/article/column/attack-mitre-sec01.html)
 
 [Azure Security Center (無料) と有効化された Azure Defender](https://docs.microsoft.com/ja-jp/azure/security-center/security-center-pricing)
@@ -879,7 +881,8 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 
 ## ラボ　補足
 **チュートリアル**
-：PythonをMACでlocalhostでテストする時
+- クイックスタート: Python (Django または Flask) Web アプリを Azure App Service にデプロイする
+- PythonをMACでlocalhostでテストする時
 ポート5000が、他のサービスで使用している場合(Airplayレシーバー)
 確認　netstat -an | grep 5000　　
    lsof -i:5000
@@ -889,7 +892,7 @@ Flaskで他のポート番号を指定する必要があります。
 flask run --host=0.0.0.0 -p 80
 
 **チュートリアル**
-チュートリアル:Azure Active Directory Domain Services のマネージド ドメインを作成して構成する
+- チュートリアル:Azure Active Directory Domain Services のマネージド ドメインを作成して構成する
 クラウド専用ユーザー アカウントの場合、ユーザーは Azure AD DS を使用する前に各自のパスワードを変更する必要があります。 このパスワード変更プロセスによって、Kerberos 認証と NTLM 認証に使用されるパスワード ハッシュが Azure AD に生成されて保存されます。 パスワードが変更されるまで、アカウントは Azure AD から Azure AD DS に同期されません。 テナント内のクラウド ユーザーのうち、Azure AD DS を使用する必要がある全ユーザーのパスワードを期限切れにして、次回のサインイン時にパスワードの変更を強制するか、または、各自のパスワードを手動で変更するようクラウド ユーザーに指示してください。 このチュートリアルでは、ユーザー パスワードを手動で変更しましょう。
 
 
