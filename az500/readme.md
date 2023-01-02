@@ -379,6 +379,7 @@ Get-AzRoleDefinition 'user access administrator'
 
 ## 1.2. モジュール02
 - [Azure のハブスポーク ネットワーク トポロジ](https://learn.microsoft.com/ja-jp/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli)
+- [ベストプラクティス　Azure ネットワーク トポロジ](https://learn.microsoft.com/ja-jp/azure/cloud-adoption-framework/ready/azure-best-practices/traditional-azure-networking-topology?toc=%2Fazure%2Farchitecture%2Ftoc.json&bc=%2Fazure%2Farchitecture%2F_bread%2Ftoc.json)
 - [Hub and spoke deployment サンプル](https://learn.microsoft.com/ja-jp/samples/mspnp/samples/hub-and-spoke-deployment/)
 **HubSpok 環境の作成**
 ```cli
