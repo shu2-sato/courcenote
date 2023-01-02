@@ -20,6 +20,7 @@
 - [support使用法](pdf/support.pdf)
 
 [AZ-500補足資料](pdf/AZ-500補足資料v1.3.pdf)
+[AZ500-ADまとめ](pdf/AZ-500%20Azure%20ADまとめ.pdf)
 
 - ローカルにダウンロードする
   
