@@ -390,7 +390,7 @@ az group create --name hub-spoke --location eastus
 az deployment group create \
     --resource-group hub-spoke \
     --template-uri https://raw.githubusercontent.com/mspnp/samples/main/solutions/azure-hub-spoke/azuredeploy.json \
-    --parameters deployVirtualMachines=true adminUsername=azureadmin adminPassword=Password2023!
+    --parameters deployVirtualMachines=true adminUsername=xxx adminPassword=yyy
 ```
 Spoke1にLinuxVM、Spoke2にWin VMを作成します。
 adminUsernameとadminPasswordは、実行するときに変更してください
