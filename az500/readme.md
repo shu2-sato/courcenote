@@ -60,6 +60,7 @@
   - [1.4.1. Azure Monitor](#141-azure-monitor)
   - [1.4.2. Azure Security Center](#142-azure-security-center)
   - [1.4.3. Microsoft Sentinel](#143-microsoft-sentinel)
+- [その他](#その他)
 - [ラボ　補足](#ラボ補足)
 
 ## 1.1. モジュール01
@@ -881,6 +882,9 @@ SQL Database のファイアウォールは、利用する接続を追記する�
 [Find your Microsoft Sentinel data connector](https://docs.microsoft.com/en-us/azure/sentinel/data-connectors-reference)
 
 ***
+## その他
+[スマホを替える時は、Microsoft Authenticator の移行を忘れないでください！](https://jpazureid.github.io/blog/azure-active-directory/move-authenticator-to-new-phone/#:~:text=MS%20Authenticator%20%E3%81%AE%E7%A7%BB%E8%A1%8C%E6%96%B9%E6%B3%95%201%20%E4%BB%BB%E6%84%8F%E3%81%AE%E7%AB%AF%E6%9C%AB%20%28PC%20%E7%AB%AF%E6%9C%AB%E3%81%8C%E8%A6%8B%E3%82%84%E3%81%99%E3%81%84%E3%81%A7%E3%81%99%29%20%E3%81%A7,%5B%2B%20%E6%96%B9%E6%B3%95%E3%81%AE%E8%BF%BD%E5%8A%A0%5D%20%E3%82%92%E6%8A%BC%E4%B8%8B%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%20...%204%20%E6%96%B0%E3%81%97%E3%81%84%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%8C%E4%B8%80%E8%A6%A7%E3%81%AB%E8%BF%BD%E5%8A%A0%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82%205%20%E4%BB%A5%E5%89%8D%E3%81%AE%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%81%AF%E4%B8%8D%E8%A6%81%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F%E3%82%89%E3%80%81%E4%B8%8A%E8%A8%98%E3%81%AE%E4%B8%80%E8%A6%A7%E3%81%8B%E3%82%89%E5%89%8A%E9%99%A4%E3%81%97%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%80%82)
+
 
 ## ラボ　補足
 **チュートリアル**
