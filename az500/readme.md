@@ -5,7 +5,8 @@
 - [AZ-500 ラボコンテンツ](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies.ja-jp)
     - [ラボファイルをローカルにダウンロードする](https://github.com/MicrosoftLearning/AZ-500JA-AzureSecurityTechnologies/archive/master.zip)
 
-- [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/neqjf5m83e37x4?wt.mc_id=esi_m2l_content_wwl)
+- [トレーニングで使用するテキスト](https://learn.microsoft.com/ja-jp/training/courses/az-500t00?WT.mc_id=ilt_partner_webpage_wwl&ocid=523802#study-guide)
+  
 
 **今回新しく個人MSアカウントを作成してください。**
 - [トレノケートラボ準備](pdf/LAB環境トレノケート.pdf)
@@ -15,12 +16,13 @@
     - [トレーニング用　Azure  PASS サブスクリプションの取得](https://www.microsoftazurepass.com/)
       - AzurePass サブスクリプションをローカルPCからアクティベートします。
       - AzurePassは、事前に案内があったものを利用ください
+    - トレノケート版　Skiilable 　：事前に案内のあったURLからログインしてください
 
-- [ ESIラボ環境準備　PDF](pdf/ラボ環境準備.pdf)
+- [ ESIラボ環境準備版](pdf/ラボ環境準備.pdf)
     - InPrivte モードでブラウザを起動
     - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
     - **今回新しく作ったMSアカウントでログインしてください。**
-    - ラボ環境[ESI版　skiilable](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
+    - ラボ環境[ESI版　skillable](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
     - トレーニングコードは、講師から案内があります。
     - AzurePass サブスクリプションはラボ環境からアクティベートします。
     
