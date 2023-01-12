@@ -7,15 +7,23 @@
 
 - [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/neqjf5m83e37x4?wt.mc_id=esi_m2l_content_wwl)
 
-- [ラボ環境準備　PDF](pdf/ラボ環境準備.pdf)
+**今回新しく個人MSアカウントを作成してください。**
+- [トレノケートラボ準備](pdf/LAB環境トレノケート.pdf)
     - InPrivte モードでブラウザを起動
     - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
-    - ラボ環境[ESI版　LODS](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
-    - ラボ環境[トレノケート版　LODS](https://trainocate.learnondemand.net/User/Login?ReturnUrl=%2F)
     - **今回新しく作ったMSアカウントでログインしてください。**
+    - [トレーニング用　Azure  PASS サブスクリプションの取得](https://www.microsoftazurepass.com/)
+      - AzurePass サブスクリプションをローカルPCからアクティベートします。
+      - AzurePassは、事前に案内があったものを利用ください
+
+- [ ESIラボ環境準備　PDF](pdf/ラボ環境準備.pdf)
+    - InPrivte モードでブラウザを起動
+    - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
+    - **今回新しく作ったMSアカウントでログインしてください。**
+    - ラボ環境[ESI版　skiilable](https://esi.learnondemand.net/User/Login?ReturnUrl=%2F)
     - トレーニングコードは、講師から案内があります。
-    - AzurePass サブスクリプションはラボ環境からアクティベートします。[トレーニング用サブスクリプションの取得](https://www.microsoftazurepass.com/)
-    - ラボ環境が英語の場合[ラボ環境キーボード変更](pdf/ラボ環境キーボード変更.pdf)
+    - AzurePass サブスクリプションはラボ環境からアクティベートします。
+    
     
 - [support使用法](pdf/support.pdf)
 
