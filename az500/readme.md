@@ -584,6 +584,8 @@ MDE非対応
 [Azure Container Instances のセキュリティに関する考慮事項](https://docs.microsoft.com/ja-jp/azure/container-instances/container-instances-image-security)
 
 **K8S参考資料**
+- [Azure Kubernetes Service (AKS) でイングレス コントローラーを作成する](https://learn.microsoft.com/ja-jp/azure/aks/ingress-basic?tabs=azure-cli#use-an-internal-ip-address)
+- [Azure Kubernetes Service (AKS) の独自の IP アドレス範囲で kubenet ネットワークを使用する](https://learn.microsoft.com/ja-jp/azure/aks/configure-kubenet)
 - [Serviceを使ったアプリケーションの公開](https://kubernetes.io/ja/docs/tutorials/kubernetes-basics/expose/expose-intro/)
 - [Service(上の資料より詳しい説明資料)](https://kubernetes.io/ja/docs/concepts/services-networking/service/)
 
