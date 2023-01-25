@@ -18,7 +18,7 @@
       - AzurePassは、事前に案内があったものを利用ください
     - トレノケート版　Skiilable 　：事前に案内のあったURLからログインしてください
 
-- [ ESIラボ環境準備版](pdf/ラボ環境準備.pdf)
+- [ ESIラボ環境準備版](pdf/ESIラボ環境準備.pdf)
     - InPrivte モードでブラウザを起動
     - [Microsoftアカウント作成](https://signup.live.com/?lic=1)
     - **今回新しく作ったMSアカウントでログインしてください。**
