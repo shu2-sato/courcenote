@@ -16,9 +16,7 @@ AZ-104のトレーニングコースを始めるにあたり、以下の準備�
 **リンク一覧およびメモ**
 
 <!--
-[AZ-104 ラボコンテンツ](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator.ja-jp)
 
-[AZ-104 ラボコンテンツ（翻訳修正版）](https://github.com/naonao71/AZ-104JA-MicrosoftAzureAdministrator/tree/master/Instructions/Labs)
 
 [トレーニングで使用するテキスト](https://docs.microsoft.com/ja-jp/users/msftofficialcurriculum-4292/collections/xe42fkkpzr6roe?wt.mc_id=esi_m2l_content_wwl)
 -->
@@ -50,11 +48,11 @@ Restart-Computer -Force
 ***
 **AZ-104 タイムスケジュール**
 
-|                | Day1                                                         | Day2                                   | Day3                                         | Day4                                       |
-| :------------- | :----------------------------------------------------------- | :------------------------------------- | :------------------------------------------- | :----------------------------------------- |
-| 午前           | 環境構築</BR>モジュール1（Lab01）                            | 前日の振り返り</BR>モジュール4（Lab4） | 前日の振り返り</BR>モジュール7               | 前日の振り返り</BR>モジュール9（Lab9b,c）  |
-| 午後           | モジュール2（Lab02a,b）</BR>モジュール3（Lab03a,b,c,d）</BR> | モジュール5</BR>モジュール6（Lab6）    | モジュール8（Lab8）</BR>モジュール9（Lab9a） | モジュール10</BR>モジュール11 （Lab10,11） |
-| オプションラボ |                                                              | 5                                      |                                              |                                            |
+|                | Day1                                                         | Day2                                | Day3                                         | Day4                                       |
+| :------------- | :----------------------------------------------------------- | :---------------------------------- | :------------------------------------------- | :----------------------------------------- |
+| 午前           | 環境構築</BR>モジュール1（Lab01）                            | </BR>モジュール4（Lab4）            | </BR>モジュール7(Lab7)                       | </BR>モジュール9（Lab9b,c）                |
+| 午後           | モジュール2（Lab02a,b）</BR>モジュール3（Lab03a,b,c,d）</BR> | モジュール5</BR>モジュール6（Lab6） | モジュール8（Lab8）</BR>モジュール9（Lab9a） | モジュール10</BR>モジュール11 （Lab10,11） |
+| オプションラボ |                                                              | 5                                   |                                              |                                            |
 
 > - 進行状況によってはこのスケジュール通りに進まないことがあります。 
 > - すべてのラボを講義中に行わないことがあります。その場合は、別途ご自身の都合がよい時間に行ってください。
@@ -172,9 +170,10 @@ AZ-104
 **補足情報**
 -
 
-[Azure Active Directory](https://github.com/naonao71/note/blob/main/AZ-104/mod01-01-aad.md)
+[Azure Active Directory](/mod/mod01-01-aad.md)
 
-[ユーザーの種類](https://github.com/naonao71/note/blob/main/AZ-104/mod01-02-user.md)
+[ユーザーの種類](/mod/mod01-02-user.md)
+
 
 ## 1.2. モジュール 02 – ガバナンスとコンプライアンスを管理する
 
@@ -232,11 +231,11 @@ Get-AzRoleDefinition 'user access administrator'
 **補足情報**
 -
 
-[サブスクリプション](https://github.com/naonao71/note/blob/main/AZ-104/mod02-01-subscription.md)
+[サブスクリプション](/mod/mod02-01-subscription.md)
 
-[ポリシー](https://github.com/naonao71/note/blob/main/AZ-104/mod02-02-policy.md)
+[ポリシー](/mod/mod02-02-policy.md)
 
-[RBAC](https://github.com/naonao71/note/blob/main/AZ-104/mod02-03-rbac.md)
+[RBAC](/mod/mod02-03-rbac.md)
 
 ## 1.3. モジュール 03 – Azure リソースを管理する
 
@@ -319,13 +318,13 @@ Get-AzResourceGroup -Name az104* | Remove-AzResourceGroup -Force
 **補足情報**
 -
 
-[Azure Resource Manager](https://github.com/naonao71/note/blob/main/AZ-104/mod03-01-arm.md)
+[Azure Resource Manager](/mod/mod03-01-arm.md)
 
-[Azure Portal](https://github.com/naonao71/note/blob/main/AZ-104/mod03-02-portal.md)
+[Azure Portal](/mod/mod03-02-portal.md)
 
-[Azure PowerShell](https://github.com/naonao71/note/blob/main/AZ-104/mod03-03-psh-cli.md)
+[Azure PowerShell](/mod/mod03-03-psh-cli.md)
 
-[ARMテンプレート](https://github.com/naonao71/note/blob/main/AZ-104/mod03-04-template.md)
+[ARMテンプレート](/mod/mod03-04-template.md)
 
 ## 1.4. モジュール 04 – 仮想ネットワークを管理する
 
@@ -402,15 +401,15 @@ $vnet | Set-AzVirtualNetwork
 **補足情報**
 -
 
-[仮想ネットワーク コンポーネント](https://github.com/naonao71/note/blob/main/AZ-104/mod04-01-vnet.md)
+[仮想ネットワーク コンポーネント](/mod/mod04-01-vnet.md)
 
-[IPアドレス](https://github.com/naonao71/note/blob/main/AZ-104/mod04-02-ip.md)
+[IPアドレス](/mod/mod04-02-ip.md)
 
-[ネットワークセキュリティグループ（NSG）](https://github.com/naonao71/note/blob/main/AZ-104/mod04-03-nsg.md)
+[ネットワークセキュリティグループ（NSG）](/mod/AZ-104/mod04-03-nsg.md)
 
-[Azure Firewall](https://github.com/naonao71/note/blob/main/AZ-104/mod04-04-firewall.md)
+[Azure Firewall](/mod/mod04-04-firewall.md)
 
-[Azure DNS](https://github.com/naonao71/note/blob/main/AZ-104/mod04-05-dns.md)
+[Azure DNS](/mod/mod04-05-dns.md)
 ## 1.5. モジュール 05 – サイト間の接続性を管理する
 
 **MS Learn コンテンツ**
@@ -463,9 +462,9 @@ vnet2(米国西部): vm2(10.52.0.4)</BR>
 **補足情報**
 -
 
-[VNetピアリング](https://github.com/naonao71/note/blob/main/AZ-104/mod05-01-peering.md)
+[VNetピアリング](/mod/mod05-01-peering.md)
 
-[Azure ExpressRoute](https://github.com/naonao71/note/blob/main/AZ-104/mod05-03-expressroute.md)
+[Azure ExpressRoute](/mod/mod05-03-expressroute.md)
 
 ## 1.6. モジュール 06 – ネットワーク トラフィック管理を管理する
 
@@ -496,11 +495,11 @@ vnet2(米国西部): vm2(10.52.0.4)</BR>
 **補足情報**
 -
 
-[ルーティング](https://github.com/naonao71/note/blob/main/AZ-104/mod06-01-routing.md)
+[ルーティング](/mod/mod06-01-routing.md)
 
-[Azure Load Balancer](https://github.com/naonao71/note/blob/main/AZ-104/mod06-02-lb.md)
+[Azure Load Balancer](/mod/mod06-02-lb.md)
 
-[Application Gateway](https://github.com/naonao71/note/blob/main/AZ-104/mod06-03-appgw.md)
+[Application Gateway](/mod/mod06-03-appgw.md)
 
 ## 1.7. モジュール 07 – Azure Storage を管理する
 
@@ -537,15 +536,15 @@ vnet2(米国西部): vm2(10.52.0.4)</BR>
 **補足情報**
 -
 
-[Azure Blob Storage](https://github.com/naonao71/note/blob/main/AZ-104/mod07-02-blob.md)
+[Azure Blob Storage](/mod/mod07-02-blob.md)
 
-[Azure Files](https://github.com/naonao71/note/blob/main/AZ-104/mod07-03-files.md)
+[Azure Files](/mod/mod07-03-files.md)
 
-[Azure File Sync](https://github.com/naonao71/note/blob/main/AZ-104/mod07-04-filesync.md)
+[Azure File Sync](/mod/mod07-04-filesync.md)
 
-[ストレージのセキュリティ](https://github.com/naonao71/note/blob/main/AZ-104/mod07-05-security.md)
+[ストレージのセキュリティ](/mod/mod07-05-security.md)
 
-[ストレージの管理ツール](https://github.com/naonao71/note/blob/main/AZ-104/mod07-06-admin.md)
+[ストレージの管理ツール](/mod/mod07-06-admin.md)
 ## 1.8. モジュール 08 – Azure Virtual Machines を管理する
 
 **MS Learn コンテンツ**
@@ -603,9 +602,9 @@ vnet2(米国西部): vm2(10.52.0.4)</BR>
 **補足情報**
 -
 
-[Azure Virtual Machines (VM)](https://github.com/naonao71/note/blob/main/AZ-104/mod08-01-vm.md)
+[Azure Virtual Machines (VM)](/mod/mod08-01-vm.md)
 
-[VMSS](https://github.com/naonao71/note/blob/main/AZ-104/mod08-02-vmss.md)
+[VMSS](/mod/mod08-02-vmss.md)
 
 ## 1.9. モジュール 09 - PaaS Compute オプションを管理する
 
@@ -651,9 +650,9 @@ AKS では、次の 2 つのネットワーク モデルのいずれかを使用
 
 **補足情報**
 
-[Azure Container Instances](https://github.com/naonao71/note/blob/main/AZ-104/mod09-02-container.md)
+[Azure Container Instances](/mod/mod09-02-container.md)
 
-[Azure Kubernetes Service (AKS)](https://github.com/naonao71/note/blob/main/AZ-104/mod09-03-aks.md)
+[Azure Kubernetes Service (AKS)](/mod/mod09-03-aks.md)
 
 ## 1.10. モジュール 10 – データ保護を管理する
 
@@ -679,11 +678,11 @@ AKS では、次の 2 つのネットワーク モデルのいずれかを使用
 **補足情報**
 -
 
-[ストレージアカウントのデータ保護](https://github.com/naonao71/note/blob/main/AZ-104/mod10-01-backup.md)
+[ストレージアカウントのデータ保護](/mod/mod10-01-backup.md)
 
-[Recovery Servicesコンテナー](https://github.com/naonao71/note/blob/main/AZ-104/mod10-02-rsvault.md)
+[Recovery Servicesコンテナー](/mod/mod10-02-rsvault.md)
 
-[Azure Site Recovery](https://github.com/naonao71/note/blob/main/AZ-104/mod10-03-asr.md)
+[Azure Site Recovery](/mod/mod10-03-asr.md)
 
 ## 1.11. モジュール 11 - 監視を管理する
 
@@ -727,4 +726,4 @@ AKS では、次の 2 つのネットワーク モデルのいずれかを使用
 **補足情報**
 -
 
-[Azure Monitor](https://github.com/naonao71/note/blob/main/AZ-104/mod11-01-azure-monitor.md)
+[Azure Monitor](/mod/mod11-01-azure-monitor.md)
