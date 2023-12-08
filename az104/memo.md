@@ -8,7 +8,7 @@ AZ-104のトレーニングコースを始めるにあたり、以下の準備�
 
  > このトレーニングで初めて Azure Portal をご利用する方は、[こちら](https://learn.microsoft.com/ja-jp/training/modules/tour-azure-portal/)で操作方法を学習できます。
 
- > [CloudSliceのTIPSを紹介しています。](/pdf/CloudSlice.pdf)
+ > [CloudSliceのTIPSを紹介しています。](pdf/CloudSlice.pdf)
 
 [AZ-104 ラボコンテンツ](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator.ja-jp)
 
