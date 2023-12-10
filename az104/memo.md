@@ -73,7 +73,7 @@ Restart-Computer -Force
   - モジュール 05 – サイト間の接続性を管理する
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-vnet-peering/6-simulation-peering)
   - モジュール 06 – ネットワーク トラフィック管理を管理する
-    - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-network-routing-endpoints/7-simulation-routing)
+    - [ラボシミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)
   - モジュール 07 – Azure Storage を管理する
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-storage-security/8-simulation-storage)
   - モジュール 08 – Azure Virtual Machines を管理する
