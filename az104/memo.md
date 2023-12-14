@@ -68,6 +68,7 @@ Restart-Computer -Force
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-azure-policy/9-simulation-policy)
   - モジュール 03 – Azure リソースを管理する
   - モジュール 04 – 仮想ネットワークを管理する
+    - [ラボシミュレーション]（https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208）
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-virtual-networks/9-simulation-create-networks)
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-network-security-groups/7-simulation-create-network-groups)
   - モジュール 05 – サイト間の接続性を管理する
@@ -81,7 +82,8 @@ Restart-Computer -Force
   - モジュール 09 - PaaS Compute オプションを管理する
     - [ラボシミュレーション9a](https://learn.microsoft.com/ja-jp/training/modules/configure-azure-app-services/11-simulation-web-apps)
     - [ラボシミュレーション9b](https://learn.microsoft.com/ja-jp/training/modules/configure-azure-container-instances/6-simulation-containers)
-    - [ラボシミュレーション9c](https://learn.microsoft.com/ja-jp/training/modules/configure-azure-kubernetes-service/8-simulation-kubernetes)
+    - [ラボシミュレーション9c AKS版 ](https://learn.microsoft.com/ja-jp/training/modules/configure-azure-kubernetes-service/8-simulation-kubernetes)
+  
   - モジュール 10 – データ保護を管理する
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-virtual-machine-backups/11-simulation-machine-backups)
   - モジュール 11 - 監視を管理する
