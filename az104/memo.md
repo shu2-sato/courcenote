@@ -68,7 +68,7 @@ Restart-Computer -Force
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-azure-policy/9-simulation-policy)
   - モジュール 03 – Azure リソースを管理する
   - モジュール 04 – 仮想ネットワークを管理する
-    - [ラボシミュレーション]（https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208）
+    - [ラボシミュレーション](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208)
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-virtual-networks/9-simulation-create-networks)
     - [ラボシミュレーション](https://learn.microsoft.com/ja-jp/training/modules/configure-network-security-groups/7-simulation-create-network-groups)
   - モジュール 05 – サイト間の接続性を管理する
