@@ -4,7 +4,7 @@
 
 AZ-104のトレーニングコースを始めるにあたり、以下の準備が必要です。
 - マイクロソフトアカウントの作成
-- LDOS(CloudSlice)環境の作成（トレーニングキーは講師から連絡します）
+- LDOS(CloudSlice)環境の作成（トレーニングキーは講師から連絡します） ß
 
  > このトレーニングで初めて Azure Portal をご利用する方は、[こちら](https://learn.microsoft.com/ja-jp/training/modules/tour-azure-portal/)で操作方法を学習できます。
 
